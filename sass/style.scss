@@ -1,3 +1,172 @@
 @import "reset.scss";
 @import "main.scss";
 
+header.header {
+	padding-top: 20px;
+}
+
+.header-top {
+	padding-bottom: 20px;
+	border-bottom: 1px solid $gray;
+	margin-bottom: 20px;
+}
+
+.header-info__phone {
+	float: right;
+	margin-right: 30px;
+	margin-top: 6px;
+	font-size: 28px;
+	font-weight: 600;
+	position: relative;
+	color: #333;
+
+	&:--hoverous {
+		text-decoration: none;
+	}
+
+	&:before {
+		content: '\f095';
+		font-family: FontAwesome;
+		position: absolute;
+		top: -3px;
+		left: -50px;
+		background: $orange;
+		color: $white;
+		font-size: 26px;
+		border-radius: 50%;
+		padding: 8px;
+		text-align: center;
+		width: 40px;
+		height: 40px;
+	}
+}
+
+.header-info__callback {
+	float: right;
+	padding: 12px 20px;
+}
+
+
+/*------------------------------------*\
+    Menu
+\*------------------------------------*/
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+	background: none;
+	color: $orange;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: #333;
+	text-transform: uppercase;
+	font-weight: bold;
+	transition: .1s color;
+
+	&:hover {
+		color: $orange;
+	}
+}
+
+
+/**
+***************************************************************
+* =MAIN
+***************************************************************
+**/
+
+/*------------------------------------*\
+    Hits
+\*------------------------------------*/
+.recent {
+	padding-bottom: 40px;
+	border-bottom: 1px solid $gray;
+	margin-bottom: 30px;
+}
+.recent__img {
+	margin-bottom: 10px
+}
+
+.recent__name {
+	display: block;
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+
+.recent__info {
+	display: inline-block;
+	margin-bottom: 10px;
+	color: $gray-bold;
+	font-size: 15px;
+}
+
+.recent__price {
+	margin-bottom: 5px;
+	font-weight: bold;
+	text-align: right;
+	font-size: 20px;
+}
+
+.recent__discount {
+	color: $gray-bold;
+	text-decoration: line-through;
+	text-align: right;
+	margin-bottom: 10px;
+}
+
+.recent__order {
+	float: right;
+}
+
+/*------------------------------------*\
+    Handmade
+\*------------------------------------*/
+.handmade {
+	padding-bottom: 40px;
+	border-bottom: 1px solid $gray;
+	margin-bottom: 30px;
+}
+.handmade__img {
+	float: left;
+	margin-right: 20px;
+}
+
+/*------------------------------------*\
+    Main page news
+\*------------------------------------*/
+.main-page-news-header h2 {
+	display: inline-block;
+	float: left;
+}
+
+.main-page-news-header__all {
+	display: inline-block;
+	float: right;
+}
+
+.news-list__item {
+	margin-bottom: 20px;
+}
+
+.news-list__img {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.news-list__date {
+	position: relative;
+	padding-left: 20px;
+	color: $gray-bold;
+
+	&:after {
+		content: '\f073';
+		font-family: FontAwesome;
+		position: absolute;
+		top: 2px;
+		left: 0;
+	}
+}
+
+.news-list__name {
+	display: block;
+	margin-top: 5px;
+}

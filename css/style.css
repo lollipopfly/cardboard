@@ -213,8 +213,34 @@ p {
   body {
     width: 320px; } }
 
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+```html
+<!-- `display: block` sprite -->
+<div class="icon-home"></div>
+
+<!-- `display: inline-block` sprite -->
+<img class="icon-home" />
+```
+*/
+.logo_small {
+  background-image: url(images/sprite.png);
+  background-position: -301px 0px;
+  width: 150px;
+  height: 106px; }
+
+.unnamed {
+  background-image: url(images/sprite.png);
+  background-position: 0px 0px;
+  width: 300px;
+  height: 300px; }
+
 header.header {
   padding-top: 20px; }
+
+.logo_small {
+  display: block; }
 
 .header-top {
   padding-bottom: 20px;

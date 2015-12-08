@@ -17,6 +17,7 @@
     "gulp-concat": "^2.6.0",
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "*",
+    "gulp-uglify": "^1.5.1",
     "postcss-custom-selectors": "*",
     "postcss-font-magician": "*",
     "remove": "*",

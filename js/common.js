@@ -10,6 +10,9 @@ $(document).ready(function() {
 	var screenWidth = $(document).width() + scrollWidth()
 
 
+	$('.slider').slick({
+  });
+
 /**
 ***************************************************************
 * =FUNCTIONS

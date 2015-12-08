@@ -2,6 +2,7 @@ var gulp         = require('gulp'),
 	postcss      = require('gulp-postcss'),
 	sass         = require('gulp-sass'),
 	autoprefixer = require('autoprefixer'),
+	uglify       = require('gulp-uglify'),
 	concat       = require('gulp-concat'),
 	browserSync  = require('browser-sync').create(),
 	selectors    = require('postcss-custom-selectors'),
@@ -24,6 +25,7 @@ gulp.task('sass', function() {
 	return gulp.src(['sass/reset.scss',
 					'sass/main.scss',
 					'css/sprite.css',
+					'node_modules/slick-carousel/slick/slick.css',
 					'sass/style.scss',])
 		.pipe(plumber())
 		//.pipe(sass().on('error', error))
@@ -33,6 +35,21 @@ gulp.task('sass', function() {
 			))
 		.pipe(postcss(processors))
 		.pipe(gulp.dest('css/'));
+});
+
+/*------------------------------------*\
+    Uglify
+\*------------------------------------*/
+
+gulp.task('compress', function() {
+	return gulp.src([
+					'js/libs/bootstrap.min.js',
+					'node_modules/slick-carousel/slick/slick.js',
+					'js/common.js'])
+		.pipe(plumber())
+		.pipe(concat('global.min.js'))
+		.pipe(uglify())
+		.pipe(gulp.dest('js/build/'));
 });
 
 
@@ -85,6 +102,8 @@ gulp.task('serve', ['sass'], function() {
 
 gulp.task('watch', function() {
 	gulp.watch('sass/**/*.scss', { interval: 500 }, ['sass', 'notify']);
+	gulp.watch('images/main/*.png', { interval: 500 }, ['sprite', 'sass', 'notify']);
+	gulp.watch('js/common.js', { interval: 500 }, ['compress', 'notify']);
 	// gulp.watch('images/main/*.png', { interval: 500 }, ['sprite']);
 });
 
@@ -103,7 +122,7 @@ gulp.task('notify', function() {
     Run default gulp tasks
 \*------------------------------------*/
 
-gulp.task('default', ['sass', 'watch']);
+gulp.task('default', ['sass', 'compress', 'watch']);
 
 
 /**

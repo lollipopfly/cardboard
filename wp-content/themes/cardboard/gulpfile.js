@@ -34,7 +34,7 @@ gulp.task('sass', function() {
 			// {outputStyle: 'compressed'}
 			))
 		.pipe(postcss(processors))
-		.pipe(gulp.dest('css/'));
+		.pipe(gulp.dest('./'));
 });
 
 /*------------------------------------*\
@@ -122,7 +122,8 @@ gulp.task('notify', function() {
     Run default gulp tasks
 \*------------------------------------*/
 
-gulp.task('default', ['sass', 'compress', 'watch']);
+// gulp.task('default', ['sass', 'compress', 'watch']);
+gulp.task('default', ['sass', 'watch']);
 
 
 /**

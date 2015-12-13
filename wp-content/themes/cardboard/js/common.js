@@ -7,10 +7,17 @@ $(document).ready(function() {
 **/
 
 	// Находим ширину экрана
-	var screenWidth = $(document).width() + scrollWidth()
+	var screenWidth = $(document).width() + scrollWidth();
 
 
 	$('.slider').slick({
+		  infinite: true,
+		  speed: 1000,
+		  fade: true,
+		  autoplaySpeed: 4000,
+		  autoplay: true,
+		  slidesToShow: 1,
+		  adaptiveHeight: true
   });
 
 /**

@@ -16,7 +16,9 @@ $white: #fff;
 $black: #000;
 $gray: #eee;
 $gray-bold: #9A9A9A;
+$gray-light: #969ba5;
 $orange: #e3621c;
+$footer_bg: #2C2B42;
 
 
 @custom-selector :--hoverous :hover, :active, :focus;
@@ -49,7 +51,7 @@ html, body {
 
 .wrap {
 	min-height: 100%;
-	margin-bottom: -142px;
+	margin-bottom: -165px;
 }
 
 .wrap:after {
@@ -58,7 +60,7 @@ html, body {
 }
 
 .footer, .wrap:after {
-	height: 142px;
+	height: 165px;
 }
 
 img {

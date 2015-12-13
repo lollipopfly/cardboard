@@ -6,6 +6,7 @@ var gulp         = require('gulp'),
 	concat       = require('gulp-concat'),
 	browserSync  = require('browser-sync').create(),
 	selectors    = require('postcss-custom-selectors'),
+	size         = require('postcss-size'),
 	spritesmith  = require('gulp.spritesmith'),
 	plumber      = require('gulp-plumber'),
 	notify       = require("gulp-notify"),
@@ -20,6 +21,7 @@ gulp.task('sass', function() {
 		autoprefixer({ browsers: ['last 20 versions'] }),
 		require('postcss-font-magician')({}),
 		selectors,
+		size,
 	];
 
 	return gulp.src(['sass/reset.scss',
@@ -34,7 +36,7 @@ gulp.task('sass', function() {
 			// {outputStyle: 'compressed'}
 			))
 		.pipe(postcss(processors))
-		.pipe(gulp.dest('./'));
+		.pipe(gulp.dest('css/'));
 });
 
 /*------------------------------------*\

@@ -20,6 +20,7 @@
 	<!--[if lt IE 9]>
 		<script src="js/libs/html5shiv.min.js"></script>
 	<![endif]-->
+	<?php //wp_head(); ?>
 </head>
 <body>
 
@@ -34,7 +35,7 @@
 					</div>
 
 					<div class="header-info col-md-10 col-sm-12 col-xs-12 pull-right">
-						<a href="#" class="header-info__phone">+7 (323) <span>323-32-32</span></a>
+						<a href="tel:+73232" class="header-info__phone">+7 (323) <span>323-32-32</span></a>
 						<a href="#" class="callback btn header-info__callback">Заказать звонок</a>
 						     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 						        <span class="sr-only">Toggle navigation</span>
@@ -51,14 +52,7 @@
 					<div class="col-md-24">
 						<nav class="navbar navbar-default">
 						    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						      <ul class="nav navbar-nav">
-						        <li class="active"><a href="#">Главная <span class="sr-only">(current)</span></a></li>
-						        <li><a href="#">Каталог</a></li>
-						        <li><a href="#">Вопрос Ответ</a></li>
-						        <li><a href="#">Новости</a></li>
-						        <li><a href="#">Оплата и доставка</a></li>
-						        <li><a href="#">Контакты</a></li>
-						      </ul>
+						      <?php wp_nav_menu('menu=main'); ?>
 						    </div><!-- /.navbar-collapse -->
 						  </div>
 					</nav>

@@ -6,8 +6,8 @@
 	<footer class="footer">
 		<!-- begin container  -->
 		<div class="container">
-			<!-- begin row  -->
-			<div class="row">
+			<!-- begin row footer-top  -->
+			<div class="row footer-top">
 				<!-- begin col-md-6  -->
 				<div class="col-md-6">
 					<a href="/" class="footer-logo">Футер лого</a>
@@ -15,32 +15,27 @@
 				<!-- end col-md-6 -->
 
 				<!-- begin col-md-6  -->
-				<div class="col-md-6">
-					<ul class="footer-menu">
-						<li class="footer-menu__ite">
-							<a href="#" class="footer-menu__link">Link 1</a>
-						</li>
-						<li class="footer-menu__ite">
-							<a href="#" class="footer-menu__link">Link 1</a>
-						</li>
-						<li class="footer-menu__ite">
-							<a href="#" class="footer-menu__link">Link 1</a>
-						</li>
-						<li class="footer-menu__ite">
-							<a href="#" class="footer-menu__link">Link 1</a>
-						</li>
-					</ul>
+				<div class="col-md-8 footer-menu">
+					<?php wp_nav_menu('menu=main'); ?>
 				</div>
 				<!-- end col-md-6 -->
 
-				<!-- begin col-md-6  -->
-				<div class="col-md-6">
-					<a href="#" class="footer__phone">+3 (323) 32-32</a>
-					<a href="#" class="footer__email">fesf@gmaikl.ru</a>
+				<!-- begin col-md-5  -->
+				<div class="col-md-5 pull-right">
+					<a href="tel:+3(323)212" class="footer__phone">+3 (323) <span>32-32</span></a>
+					<a href="mailto:fesf@gmaikl.ru" class="footer__email">fesf@gmaikl.ru</a>
 				</div>
-				<!-- end col-md-6 -->
+				<!-- end col-md-5 -->
 			</div>
 			<!-- end row -->
+
+			<!-- begin row  -->
+			<div class="row">
+				<div class="col-md-24 copyright">
+					<p>Sitename &copy; 2014 — 2015 Все права защищены.</p>
+				</div>
+			</div>
+			<!-- end row footer-top -->
 		</div>
 		<!-- end container -->
 	</footer>

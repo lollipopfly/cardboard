@@ -14,7 +14,6 @@ header.header {
 
 .header-info__phone {
 	float: left;
-	// margin-right: 30px;
 	margin-top: 6px;
 	font-size: 28px;
 	font-weight: 600;
@@ -51,22 +50,76 @@ header.header {
 /*------------------------------------*\
     Menu
 \*------------------------------------*/
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
-	background: none;
-	color: $orange;
+.navbar-default {
+	margin-bottom: 0;
 }
 
-.navbar-default .navbar-nav>li>a {
+#menu-main li {
+	float: left;
+	margin-right: 25px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+#menu-main li.current-menu-item a {
+		color: $orange;
+	}
+
+#menu-main li a {
 	color: #333;
 	text-transform: uppercase;
 	font-weight: bold;
 	transition: .1s color;
 
-	&:hover {
+	&:--hoverous {
 		color: $orange;
+		text-decoration: none;
 	}
 }
 
+/* SLIDER */
+.slider {
+	margin-bottom: 30px;
+}
+.slick-prev,
+.slick-next {
+	z-index: 1;
+	position: absolute;
+	top: 50%;
+	display: block;
+	size: 50px;
+	color: transparent;
+	background: none;
+	border: none;
+	outline: none;
+
+	&:after {
+		font-family: FontAwesome;
+		position: absolute;
+		top: 0;
+		left: 2px;
+		color: $white;
+		font-size: 50px;
+	}
+}
+
+.slick-prev {
+	left: 20px;
+
+	&:after {
+		content: '\f137';
+	}
+}
+
+.slick-next {
+	right: 20px;
+
+	&:after {
+		content: '\f138';
+	}
+}
 
 /**
 ***************************************************************
@@ -172,6 +225,86 @@ header.header {
 	margin-top: 5px;
 }
 
+/**
+***************************************************************
+* =FOOTER
+***************************************************************
+**/
+
+footer.footer {
+	padding-top: 25px;
+	background: $footer_bg;
+}
+
+.footer-top {
+	margin-bottom: 20px;
+}
+
+/* Footer menu */
+.footer-menu ul {
+	columns: 2;
+
+	li {
+		margin-bottom: 10px;
+
+		a {
+			font-size: 18px;
+			color: $gray-light;
+
+			&:--hoverous {
+				color: $white;
+			}
+		}
+	}
+}
+
+.footer__phone,
+.footer__email {
+	display: block;
+	position: relative;
+	color: $gray-light;
+
+	&:--hoverous {
+		text-decoration: none;
+		color: $white;
+
+		&:before {
+			color: $white;
+		}
+	}
+
+	&:before {
+		font-family: FontAwesome;
+		position: absolute;
+		top: 0;
+		left: -30px;
+		color: $gray-light;
+	}
+}
+
+.footer__phone {
+	font-size: 20px;
+	margin-bottom: 15px;
+
+	span {
+		color: $white;
+	}
+
+	&:before {
+		content: '\f095';
+	}
+}
+
+.footer__email {
+	&:before {
+		content: '\f0e0';
+	}
+}
+
+.copyright {
+	text-align: center;
+	color: $gray-light;
+}
 
 /**
 * ----------------------------------------------------------------------------------------------------
@@ -188,6 +321,15 @@ header.header {
 }
 
 @media screen and (max-width: 991px) {
+	/* Main menu */
+	#menu-main li {
+		margin-right: 20px;
+	}
+
+	#menu-main li a {
+		font-size: 15px;
+	}
+
 	/* Main */
 	.recent__item {
 		margin-bottom: 20px;
@@ -212,6 +354,10 @@ header.header {
 		display: none;
 	}
 
+	/* Main menu */
+	.navbar {
+		min-height: auto;
+	}
 	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
 		border: none;
 	}
@@ -231,6 +377,16 @@ header.header {
 		width: 42px;
 		height: 6px;
 		margin-top: 5px;
+	}
+
+	#menu-main li {
+		float: none;
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+
+	#menu-main li a{
+		font-size: 16px;
 	}
 }
 

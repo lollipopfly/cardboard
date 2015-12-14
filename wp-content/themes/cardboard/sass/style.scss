@@ -358,6 +358,13 @@ footer.footer {
 	.impresstion {
 		margin-bottom: 20px;
 	}
+
+	/* RECENT HIT */
+	.recent--hit {
+		.recent__item:nth-child(3n+3) {
+			clear: left;
+		}
+	}
 }
 
 @media screen and (max-width: 767px) {

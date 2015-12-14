@@ -11,39 +11,45 @@
 		<div class="row">
 				<section class="col-md-24">
 					<h2>Хиты продаж</h2>
-					<ul class="recent row">
-						<li class="recent__item col-md-6 col-sm-12 col-xs-12">
-							<img class="recent__img" src="http://lorempixel.com/300/200/" alt="">
-							<a href="" class="recent__name">GoogleCardboard</a>
-							<span class="recent__info">Очки виртуальной реальности из картона</span>
-							<p class="recent__price">1999 руб</p>
-							<p class="recent__discount">1200 руб</p>
-							<a href="#" class="recent__order btn btn-order">заказать</a>
-						</li>
-						<li class="recent__item col-md-6 col-sm-12 col-xs-12">
-							<img class="recent__img" src="http://lorempixel.com/300/200/" alt="">
-							<a href="" class="recent__name">GoogleCardboard</a>
-							<span class="recent__info">Очки виртуальной реальности из картона</span>
-							<p class="recent__price">1999 руб</p>
-							<p class="recent__discount">1200 руб</p>
-							<a href="#" class="recent__order btn btn-order">заказать</a>
-						</li>
-						<li class="recent__item col-md-6 col-sm-12 col-xs-12">
-							<img class="recent__img" src="http://lorempixel.com/300/200/" alt="">
-							<a href="" class="recent__name">GoogleCardboard</a>
-							<span class="recent__info">Очки виртуальной реальности из картона</span>
-							<p class="recent__price">1999 руб</p>
-							<p class="recent__discount">1200 руб</p>
-							<a href="#" class="recent__order btn btn-order">заказать</a>
-						</li>
-						<li class="recent__item col-md-6 col-sm-12 col-xs-12">
-							<img class="recent__img" src="http://lorempixel.com/300/200/" alt="">
-							<a href="" class="recent__name">GoogleCardboard</a>
-							<span class="recent__info">Очки виртуальной реальности из картона</span>
-							<p class="recent__price">1999 руб</p>
-							<p class="recent__discount">1200 руб</p>
-							<a href="#" class="recent__order btn btn-order">заказать</a>
-						</li>
+					<ul class="recent recent--hit row">
+						<?
+						$args = array(
+							'meta_query' => array(
+								array(
+									'key' => 'hit',
+									'value' => 1
+								)
+							),
+							'showposts' => 4,
+							'cat' => 3,
+						);
+						$wp_query = new WP_Query($args);
+						?>
+						<? while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+						<? if($cost = get_post_meta(get_the_ID(), 'hit')):?>
+							<li class="recent__item col-md-6 col-sm-12 col-xs-12">
+								<? $cost = get_post_meta(get_the_ID(), 'cost');
+								   $old_cost = get_post_meta(get_the_ID(), 'old-cost');
+								   $info = get_post_meta(get_the_ID(), 'preview');
+								?>
+								<?	if ( has_post_thumbnail() ) {
+								    $image_src = wp_get_attachment_image_src( get_post_thumbnail_id(),'thumbnail' );?>
+								     <a href="<? the_permalink()?>"><img width="100%" src="<?=$image_src[0]?>"></a>
+								<?}?>
+								<a class="recent__name" href="<?php the_permalink(); ?>"><? the_title(); ?></a>
+								<? if($info[0]):?>
+									<span class="recent__info"><?=$info[0];?></span>
+								<?endif;?>
+								<? if($cost[0]):?>
+									<p class="recent__price"><?=$cost[0];?> руб.</p>
+								<?endif;?>
+								<? if($old_cost[0]):?>
+									<p class="recent__discount"><?=$old_cost[0];?> руб.</p>
+								<?endif;?>
+								<a href="#" class="recent__order btn btn-order">Заказать</a>
+							</li>
+							<? endif;?>
+						<? endwhile;?>
 					</ul>
 				</section>
 			</div>

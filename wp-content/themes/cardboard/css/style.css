@@ -428,6 +428,10 @@ header.header {
   display: block;
   margin-bottom: 10px;
   font-size: 20px; }
+  .recent__name:hover,
+  .recent__name:active,
+  .recent__name:focus {
+    text-decoration: none; }
 
 .recent__info {
   display: inline-block;
@@ -449,6 +453,12 @@ header.header {
 
 .recent__order {
   float: right; }
+
+.recent--cat .recent__item {
+  width: 20%;
+  display: inline-block;
+  vertical-align: top;
+  margin: 2%; }
 
 /*------------------------------------*    Handmade
 \*------------------------------------*/
@@ -584,6 +594,8 @@ footer.footer {
   /* Main */
   .recent__item {
     margin-bottom: 20px; }
+  .recent--cat .recent__item {
+    width: 45%; }
   .recent__img {
     width: 100%; }
   .impresstion {
@@ -623,7 +635,12 @@ footer.footer {
   .recent__item {
     width: 100%;
     float: none;
-    overflow: hidden; } }
+    overflow: hidden; }
+  .recent--cat {
+    padding: 0 10px; }
+  .recent--cat .recent__item {
+    width: 100%;
+    margin: 0; } }
 
 @media screen and (max-width: 320px) {
   body {

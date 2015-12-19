@@ -127,6 +127,55 @@ header.header {
 ***************************************************************
 **/
 
+.aside-cats {
+	.cat-item {
+		a {
+			position: relative;
+			display: block;
+			padding: 15px 30px 15px 10px;
+			color: $black;
+			border-bottom: 1px solid $gray;
+
+			&:--hoverous {
+				text-decoration: none;
+				color: $orange;
+
+				&:after {
+					right: 25px;
+				}
+			}
+
+			&:after {
+				content: '\f054';
+				font-family: FontAwesome;
+				position: absolute;
+				top: 50%;
+				right: 20px;
+				color: $gray-bold;
+				font-size: 12px;
+				transition: right .5s;
+			}
+		}
+
+	}
+		.current-cat {
+			a {
+				color: $white;
+				background: $orange;
+				border-bottom: none;
+
+				&:--hoverous {
+					color: $white;
+					background: $orange;
+				}
+
+				&:after {
+					content: '';
+				}
+			}
+		}
+}
+
 /*------------------------------------*\
     Hits
 \*------------------------------------*/
@@ -175,8 +224,9 @@ header.header {
 	float: right;
 }
 
+/* Catalog item list */
 .recent--cat .recent__item {
-	width: 20%;
+	width: 29%;
 	display: inline-block;
 	vertical-align: top;
 	margin: 2%;
@@ -330,6 +380,11 @@ footer.footer {
 		float: right;
 		margin-bottom: 20px;
 	}
+
+	/* Catalog items list */
+	.recent--cat .recent__item {
+		width: 28%;
+	}
 }
 
 @media screen and (max-width: 991px) {
@@ -347,6 +402,7 @@ footer.footer {
 		margin-bottom: 20px;
 	}
 
+	/* Catalog items list */
 	.recent--cat .recent__item {
 		width: 45%;
 	}
@@ -428,6 +484,16 @@ footer.footer {
 	.recent--cat .recent__item {
 		width: 100%;
 		margin: 0;
+	}
+}
+
+@media screen and (max-width:640px) {
+	aside.aside {
+		display: none;
+	}
+
+	.content {
+		width: 100%;
 	}
 }
 

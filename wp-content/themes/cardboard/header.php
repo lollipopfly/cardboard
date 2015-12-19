@@ -18,7 +18,7 @@
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/style.css" >
 
 	<!--[if lt IE 9]>
-		<script src="js/libs/html5shiv.min.js"></script>
+		<script src="<?php bloginfo('template_url'); ?>/js/libs/html5shiv.min.js"></script>
 	<![endif]-->
 	<?php //wp_head(); ?>
 </head>

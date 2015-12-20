@@ -9,16 +9,35 @@ $(document).ready(function() {
 	// Находим ширину экрана
 	var screenWidth = $(document).width() + scrollWidth();
 
-
 	$('.slider').slick({
-		  infinite: true,
-		  speed: 1000,
-		  fade: true,
-		  autoplaySpeed: 4000,
-		  autoplay: true,
-		  slidesToShow: 1,
-		  adaptiveHeight: true
-  });
+		infinite: true,
+		speed: 1000,
+		fade: true,
+		autoplaySpeed: 4000,
+		autoplay: true,
+		slidesToShow: 1,
+		adaptiveHeight: true
+	});
+
+
+/**
+***************************************************************
+* =USABILLITY
+***************************************************************
+**/
+
+/*------------------------------------*\
+    Menu dropdown
+\*------------------------------------*/
+
+$('#menu-main li.menu-item-has-children > a').on('click', function(event) {
+	if(screenWidth < 768) {
+		event.preventDefault();
+		$(this).siblings('ul').slideToggle(400);
+
+	}
+});
+
 
 /**
 ***************************************************************

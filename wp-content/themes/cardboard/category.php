@@ -1,9 +1,3 @@
-<?php
-/*
-Template Name: Сatalog
-*/
-?>
-
 <? get_header();?>
 <!-- begin row  -->
 <div class="row">
@@ -14,9 +8,15 @@ Template Name: Сatalog
 	<!-- begin content  -->
 	<div class="content col-md-18 col-sm-16 col-xs-16">
 		<?
+		$category = get_the_category();
+		if($category) {
+			$category_id = $category[0]->term_id;
+		} else {
+			$category_id = 99999;
+		}
 		$wp_query= null;
 		$wp_query = new WP_Query();
-		$wp_query->query('showposts=15' . '&paged='.$paged);
+		$wp_query->query('showposts=22&cat='.$category_id);
 		if($wp_query):?>
 			<ul class="recent recent--cat row">
 				<? while ($wp_query->have_posts()) : $wp_query->the_post(); ?>

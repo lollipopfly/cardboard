@@ -16,7 +16,7 @@
 
 				<!-- begin col-md-6  -->
 				<div class="col-md-8 footer-menu">
-					<?php wp_nav_menu('menu=main'); ?>
+					<?php wp_nav_menu('menu=footer-menu'); ?>
 				</div>
 				<!-- end col-md-6 -->
 

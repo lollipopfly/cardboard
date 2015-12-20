@@ -1,4 +1,5 @@
 .sass-cache/
+/site-debug
 bower_components/
 node_modules/
 *.psd

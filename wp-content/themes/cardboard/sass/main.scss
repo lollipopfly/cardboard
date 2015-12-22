@@ -23,7 +23,18 @@ $orange-light: #FCAE83;
 $footer_bg: #2C2B42;
 
 
+/**
+* ----------------------------------------------------------------------------------------------------
+* MIXINS
+* ----------------------------------------------------------------------------------------------------
+*/
+
 @custom-selector :--hoverous :hover, :active, :focus;
+
+@mixin orange-colorize($orange) {
+	background: $orange;
+	color: $white;
+}
 
 /**
 * ----------------------------------------------------------------------------------------------------
@@ -80,7 +91,7 @@ a {
 
 h2 {
 	font-weight: bold;
-	font-size: 27px;
+	font-size: 29px;
 	margin-bottom: 25px;
 }
 
@@ -121,6 +132,20 @@ p {
 	&:--hoverous {
 		background: #f97933;
 		border-color: #f97933;
+	}
+}
+
+.btn-small {
+	padding: 7px 18px;
+	font-size: 14px;
+}
+
+.btn-orange {
+	background: $orange;
+	color: $white;
+
+	&:hover {
+		background: $orange-bold;
 	}
 }
 

@@ -63,3 +63,7 @@
 		<!-- /.container -->
 		<!-- begin container main  -->
 		<div class="container main">
+			<?php
+			if(!is_home()):?>
+				<h2><?=wp_title();?></h2>
+			<?endif;?>

@@ -171,6 +171,7 @@ header.header {
 	z-index: 1;
 	position: absolute;
 	top: 50%;
+	margin-top: -25px;
 	display: block;
 	size: 50px;
 	color: transparent;
@@ -371,14 +372,18 @@ header.header {
 	float: right;
 }
 
-.news-list__item {
-	margin-bottom: 20px;
+.news-list {
+	img {
+		float: left;
+		margin-right: 10px;
+		margin-bottom: 10px;
+		max-width: 120px;
+		max-height: 50px;
+	}
 }
 
-.news-list__img {
-	float: left;
-	margin-right: 10px;
-	margin-bottom: 10px;
+.news-list__item {
+	margin-bottom: 20px;
 }
 
 .news-list__date {
@@ -398,6 +403,99 @@ header.header {
 .news-list__name {
 	display: block;
 	margin-top: 5px;
+
+	&:--hoverous {
+		text-decoration: none;
+	}
+}
+
+/*------------------------------------*\
+    Pagination
+\*------------------------------------*/
+
+.wp-pagenavi {
+	text-align: center;
+
+	a:first-child,
+	.current:first-child {
+		border-left: 1px solid $gray;
+	}
+
+	a,
+	.current {
+		display: inline-block;
+		border-top: 1px solid $gray;
+		border-bottom: 1px solid $gray;
+		border-right: 1px solid $gray;
+		padding: 10px;
+
+		&:--hoverous {
+			text-decoration: none;
+		}
+	}
+
+	a {
+		&:--hoverous {
+			@include orange-colorize($orange);
+		}
+	}
+
+	.current {
+		@include orange-colorize($orange);
+	}
+}
+
+/**
+***************************************************************
+* =PAGES
+***************************************************************
+**/
+
+/*------------------------------------*\
+    NEWS
+\*------------------------------------*/
+
+.news__item {
+	margin-bottom: 30px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid $gray;
+
+	&:last-child {
+		border: none;
+	}
+}
+
+.news__name {
+	display: inline-block;
+	margin-bottom: 10px;
+	color: $orange;
+	font-weight: bold;
+
+	&:--hoverous {
+		text-decoration: none;
+	}
+}
+
+.news__date {
+	display: block;
+	margin-bottom: 10px;
+	position: relative;
+	padding-left: 20px;
+	color: $gray-bold;
+
+	&:after {
+		content: '\f073';
+		font-family: FontAwesome;
+		position: absolute;
+		top: 0px;
+		left: 0;
+	}
+}
+
+.news__excerpt {
+	font-size: 13px;
+	line-height: 21px;
+	margin-bottom: 10px;
 }
 
 /**
@@ -628,6 +726,19 @@ footer.footer {
 }
 
 @media screen and (max-width:480px) {
+	/*------------------------------------*\
+	    Slider
+	\*------------------------------------*/
+	.slick-prev,
+	.slick-next {
+		size: 30px;
+		margin-top: -15px;
+
+		&:after {
+			font-size: 30px;
+		}
+	}
+
 	/* Main */
 	.recent__item {
 		width: 100%;
@@ -642,6 +753,19 @@ footer.footer {
 	.recent--cat .recent__item {
 		width: 100%;
 		margin: 0;
+	}
+
+	/*------------------------------------*\
+	    NEWS
+	\*------------------------------------*/
+	.news__left,
+	.news__right {
+		width: 100%;
+		float: none;
+	}
+
+	.news__left {
+		text-align: center;
 	}
 }
 

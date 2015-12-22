@@ -80,25 +80,42 @@
 					<div class="main-page-news-header row">
 						<div class="col-md-24">
 							<h2>Новости</h2>
-							<a href="#" class="btn main-page-news-header__all">Все новости</a>
+							<a href="/news/" class="btn main-page-news-header__all">Все новости</a>
 						</div>
 					</div>
-					<ul class="news-list">
-						<li class="news-list__item clearfix">
+					<?php
+						$id = 11; // ID заданной рубрики
+						$n = 2;   // количество выводимых записей
+						$args = array(
+							'cat' => $id,
+							'post_type' => 'post',
+							'posts_per_page' => $n,
+							// 'paged' => get_query_var('paged'),
+						);
+
+						$recent = new WP_Query($args);?>
+						<? if($recent):?>
+							<ul class="news-list">
+								<?while($recent->have_posts()) : $recent->the_post();?>
+									<? $date = get_the_date('n F Y');?>
+									<li class="news__item row">
+										<? the_post_thumbnail();?>
+										<div class="news-list-info">
+											<span class="news-list__date"><?=$date;?></span>
+											<a class="news-list__name" href="<?php the_permalink()?>"><?php the_title(); ?></a>
+										</div>
+									</li>
+								<?php endwhile; ?>
+							</ul>
+						<? endif;?>
+
+<!-- 						<li class="news-list__item clearfix">
 							<img class="news-list__img" src="http://lorempixel.com/120/50/" alt="">
 							<div class="news-list-info">
 								<span class="news-list__date">5 Ноября</span>
 								<a href="#" class="news-list__name">Cardboard и YouTube для Android получили обновление</a>
 							</div>
-						</li>
-						<li class="news-list__item clearfix">
-							<img class="news-list__img" src="http://lorempixel.com/120/50/" alt="">
-							<div class="news-list-info">
-								<span class="news-list__date">5 Ноября</span>
-								<a href="#" class="news-list__name">Cardboard и YouTube для Android получили обновление</a>
-							</div>
-						</li>
-					</ul>
+						</li> -->
 				</section>
 				<!-- end main-page-news col-md-12 -->
 			</div>

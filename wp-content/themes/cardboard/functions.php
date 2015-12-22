@@ -11,20 +11,14 @@
 	add_theme_support('post-thumbnails');
 
 
+	// Избавляемся от [...] в цитате поста
+	function new_excerpt_more($more) {
+		return '...';
+	}
+	add_filter('excerpt_more', 'new_excerpt_more');
 
-
-add_action('woocommerce_before_main_content', 'my_theme_wrapper_start', 10);
-add_action('woocommerce_after_main_content', 'my_theme_wrapper_end', 10);
-
-function my_theme_wrapper_start() {
-  echo '<section id="main">';
-}
-
-function my_theme_wrapper_end() {
-  echo '</section>';
-}
-
-add_action( 'after_setup_theme', 'woocommerce_support' );
-function woocommerce_support() {
-    add_theme_support( 'woocommerce' );
-}
+	// Изменение длины обрезаемого текста
+	function new_excerpt_length($length) {
+		return 40;
+	}
+	add_filter('excerpt_length', 'new_excerpt_length');

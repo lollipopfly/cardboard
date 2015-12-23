@@ -8,7 +8,7 @@ Template Name: News
 	<!-- begin row  -->
 	<div class="row">
 		<aside class="aside col-md-6 col-sm-8 col-xs-8">
-			<? require(get_template_directory() . '/inсlude/cat-list.php');?>
+			<? require(get_template_directory() . '/include/cat-list.php');?>
 		</aside>
 
 		<!-- begin content  -->

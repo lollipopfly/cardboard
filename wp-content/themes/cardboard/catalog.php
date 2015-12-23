@@ -8,7 +8,7 @@ Template Name: Сatalog
 <!-- begin row  -->
 <div class="row">
 	<aside class="aside col-md-6 col-sm-8 col-xs-8">
-		<? require(get_template_directory() . '/inсlude/cat-list.php');?>
+		<? require(get_template_directory() . '/include/cat-list.php');?>
 	</aside>
 
 	<!-- begin content  -->
@@ -35,13 +35,16 @@ Template Name: Сatalog
 				<div class="row">
 					<?foreach ($row as $value):?>
 						<li class="sec-list__item col-md-12 col-sm-24 col-xs-24">
-							<?$image_src = get_field('category_img', $value);?>
+							<?
+								$image_src = get_field('category_img', $value);
+								$category_link = get_category_link($value->term_id);
+							?>
 							<?if($image_src):?>
 								<a class="sec-list__image-link" href="<?get_category_link( $value->term_id )?>">
 									<img class="sec-list__image" src="<?=$image_src?>" alt="">
 								</a>
 							<?endif;?>
-							<a class="sec-list__name" href="<?get_category_link( $value->term_id )?>"><?=$value->name?></a>
+							<a class="sec-list__name" href="<?=esc_url($category_link);?>"><?=$value->name?></a>
 						</li>
 					<?endforeach;?>
 				</div>

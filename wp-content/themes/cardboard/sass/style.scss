@@ -56,6 +56,7 @@ header.header {
 
 #menu-main > li {
 	float: left;
+	margin-right: 30px;
 
 	&:hover a {
 		color: $orange;
@@ -74,7 +75,8 @@ header.header {
 #menu-main > li > a {
 	position: relative;
 	color: #333;
-	padding: 15px 15px;
+	// padding: 15px 15px 0 15px;
+	padding-bottom: 15px;
 	text-transform: uppercase;
 	font-weight: bold;
 	transition: .1s color;
@@ -142,14 +144,15 @@ header.header {
 
 #menu-main > li:first-child > a {
 	position: relative;
+	// padding-left: 0;
 
 	&:after {
 		content: '\f078';
 		color: $black;
 		font-family: FontAwesome;
 		position: absolute;
-		top: 50%;
-		right: 2px;
+		top: 10px;
+		right: -12px;
 		font-size: 8px;
 		margin-top: -4px;
 	}
@@ -157,6 +160,10 @@ header.header {
 
 #menu-main > li:first-child:hover > a:after {
 		color: $orange;
+}
+
+#menu-main > li:last-child {
+	margin-right: 0;
 }
 /*------------------------------------*\
     Slider
@@ -264,7 +271,7 @@ header.header {
     Main catalog section list
 \*------------------------------------*/
 .category-desc {
-	font-size: 17px;
+	font-size: 15px;
 	margin-bottom: 40px;
 }
 .sec-list__item {
@@ -410,6 +417,40 @@ header.header {
 }
 
 /*------------------------------------*\
+    Breadcrumbs
+\*------------------------------------*/
+
+.breadcrumbs {
+	margin-bottom: 20px;
+
+	a {
+		color: $gray-bold;
+		font-size: 12px;
+
+		&:--hoverous {
+			text-decoration: none;
+		}
+	}
+
+	i {
+		color: $orange;
+		font-size: 10px;
+	}
+}
+
+.breadcrumbs__page {
+	color: $gray-bold;
+	font-size: 12px;
+}
+
+// .bradcrumbs__link {
+// 	&:--hoverous {
+// 		text-decoration: none;
+// 	}
+// }
+
+
+/*------------------------------------*\
     Pagination
 \*------------------------------------*/
 
@@ -496,6 +537,37 @@ header.header {
 	font-size: 13px;
 	line-height: 21px;
 	margin-bottom: 10px;
+}
+
+/*------------------------------------*\
+    Single news
+\*------------------------------------*/
+.single-news {
+	img {
+		float: left;
+		margin-right: 10px;
+	}
+}
+
+.single-news__text {
+	font-size: 15px;
+	margin-bottom: 15px;
+}
+
+.single-news__back {
+	position: relative;
+	margin-left: 25px;
+	color: $orange;
+	font-size: 18px;
+
+	&:after {
+		content: '\f0a5';
+		font-family: FontAwesome;
+		position: absolute;
+		top: 2px;
+		left: -25px;
+		font-size: 18px;
+	}
 }
 
 /**

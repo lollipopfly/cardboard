@@ -10,7 +10,7 @@
 
 		<div class="row">
 				<section class="col-md-24">
-					<h2>Хиты продаж</h2>
+					<h3>Хиты продаж</h3>
 					<ul class="recent recent--hit row">
 						<?
 						$args = array(
@@ -58,7 +58,7 @@
 			<div class="row">
 				<!-- begin col-md-24 handmade  -->
 				<section class="col-md-24 handmade">
-					<h2>Соберите Google Cardboard своими руками</h2>
+					<h3>Соберите Google Cardboard своими руками</h3>
 					<img class="handmade__img" src="http://lorempixel.com/300/150/" alt="">
 					<p class="handmade__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt libero, itaque accusantium! Eveniet, hic itaque? Atque nesciunt suscipit reprehenderit expedita molestiae, iusto! Quos qui quisquam possimus, perspiciatis culpa rem velit.</p>
 				</section>
@@ -70,7 +70,7 @@
 			<div class="row">
 				<!-- begin impresstion col-md-12  -->
 				<section class="impresstion col-md-12 col-md-12">
-					<h2>Впечатления</h2>
+					<h3>Впечатления</h3>
 					Youtube
 				</section>
 				<!-- end impresstion col-md-12 -->
@@ -79,7 +79,7 @@
 				<section class="main-page-news col-md-12 col-md-12">
 					<div class="main-page-news-header row">
 						<div class="col-md-24">
-							<h2>Новости</h2>
+							<h3>Новости</h3>
 							<a href="/news/" class="btn main-page-news-header__all">Все новости</a>
 						</div>
 					</div>
@@ -90,7 +90,6 @@
 							'cat' => $id,
 							'post_type' => 'post',
 							'posts_per_page' => $n,
-							// 'paged' => get_query_var('paged'),
 						);
 
 						$recent = new WP_Query($args);?>
@@ -108,14 +107,6 @@
 								<?php endwhile; ?>
 							</ul>
 						<? endif;?>
-
-<!-- 						<li class="news-list__item clearfix">
-							<img class="news-list__img" src="http://lorempixel.com/120/50/" alt="">
-							<div class="news-list-info">
-								<span class="news-list__date">5 Ноября</span>
-								<a href="#" class="news-list__name">Cardboard и YouTube для Android получили обновление</a>
-							</div>
-						</li> -->
 				</section>
 				<!-- end main-page-news col-md-12 -->
 			</div>

@@ -584,12 +584,13 @@ header.header {
 	border-bottom: 2px solid $gray-bold;
 	font-size: 19px;
 	font-weight: bold;
+	transition: border-bottom .3s;
 
 	&:hover {
-		border-bottom: 2px solid $gray-bold;
+		border-bottom: 2px solid $orange;
 
 		i {
-			color: $gray-bold;
+			color: $orange;
 		}
 	}
 
@@ -599,6 +600,7 @@ header.header {
 		right: 0;
 		font-size: 30px;
 		color: $gray-bold;
+		transition: color .3s;
 	}
 }
 

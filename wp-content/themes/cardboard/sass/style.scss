@@ -570,6 +570,61 @@ header.header {
 	}
 }
 
+/*------------------------------------*\
+    Faq
+\*------------------------------------*/
+.faq {
+	list-style-type: none;
+}
+.faq__name {
+	position: relative;
+	display: block;
+	padding: 20px 30px 20px 0;
+	cursor: pointer;
+	border-bottom: 2px solid $gray-bold;
+	font-size: 19px;
+	font-weight: bold;
+
+	&:hover {
+		border-bottom: 2px solid $gray-bold;
+
+		i {
+			color: $gray-bold;
+		}
+	}
+
+	i {
+		position: absolute;
+		top: 11px;
+		right: 0;
+		font-size: 30px;
+		color: $gray-bold;
+	}
+}
+
+.faq__name--active {
+	border-bottom: 2px solid $orange;
+
+	&:hover {
+		border-bottom: 2px solid $orange;
+
+		i {
+			color: $orange;
+		}
+	}
+
+	i {
+		color: $orange;
+	}
+}
+
+.faq__content {
+	display: none;
+	padding-top: 10px;
+	font-size: 18px;
+	line-height: 22px;
+}
+
 /**
 ***************************************************************
 * =FOOTER

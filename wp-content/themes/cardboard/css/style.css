@@ -772,6 +772,45 @@ header.header {
     left: -25px;
     font-size: 18px; }
 
+/*------------------------------------*    Faq
+\*------------------------------------*/
+.faq {
+  list-style-type: none; }
+
+.faq__name {
+  position: relative;
+  display: block;
+  padding: 20px 30px 20px 0;
+  cursor: pointer;
+  border-bottom: 2px solid #9A9A9A;
+  font-size: 19px;
+  font-weight: bold; }
+  .faq__name:hover {
+    border-bottom: 2px solid #9A9A9A; }
+    .faq__name:hover i {
+      color: #9A9A9A; }
+  .faq__name i {
+    position: absolute;
+    top: 11px;
+    right: 0;
+    font-size: 30px;
+    color: #9A9A9A; }
+
+.faq__name--active {
+  border-bottom: 2px solid #e3621c; }
+  .faq__name--active:hover {
+    border-bottom: 2px solid #e3621c; }
+    .faq__name--active:hover i {
+      color: #e3621c; }
+  .faq__name--active i {
+    color: #e3621c; }
+
+.faq__content {
+  display: none;
+  padding-top: 10px;
+  font-size: 18px;
+  line-height: 22px; }
+
 /**
 ***************************************************************
 * =FOOTER

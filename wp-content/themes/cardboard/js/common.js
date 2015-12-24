@@ -38,6 +38,29 @@ $('#menu-main li.menu-item-has-children > a').on('click', function(event) {
 	}
 });
 
+/*------------------------------------*\
+    Faq
+\*------------------------------------*/
+$('.faq__name').on('click', function(event) {
+	event.preventDefault();
+	var $this = $(this);
+	if($this.hasClass('faq__name--active')) {
+		$this.removeClass('faq__name--active');
+	} else {
+		$this.addClass('faq__name--active')
+			.siblings('.faq__name')
+			.removeClass('faq__name--active');
+
+		console.log('no');
+	}
+
+	$this.next('.faq__content')
+		.slideToggle()
+		.siblings('.faq__content')
+		.slideUp();
+});
+
+
 
 /**
 ***************************************************************

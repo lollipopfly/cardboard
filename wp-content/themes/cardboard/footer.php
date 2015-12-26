@@ -42,9 +42,6 @@
 
 	<!-- SCRIPTS -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<!-- 	<script src='js/libs/bootstrap.min.js'></script>
-	<script src='js/libs/jquery.bxslider.min.js'></script>
-	<script src='js/common.js'></script> -->
 	<script src='<?php bloginfo('template_url'); ?>/js/build/global.min.js'></script>
 </body>
 </html>

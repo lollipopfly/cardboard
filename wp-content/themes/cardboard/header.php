@@ -23,7 +23,6 @@
 	<?php //wp_head(); ?>
 </head>
 <body>
-
 	<!-- begin wrap  -->
 	<div class="wrap">
 		<div class="container">

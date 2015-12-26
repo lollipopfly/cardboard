@@ -43,5 +43,9 @@
 	<!-- SCRIPTS -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src='<?php bloginfo('template_url'); ?>/js/build/global.min.js'></script>
+
+	<!-- Calback form -->
+	<? require(get_template_directory() . '/include/callback.php');?>
+	<?php wp_footer(); ?>
 </body>
 </html>

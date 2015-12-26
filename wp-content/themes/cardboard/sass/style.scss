@@ -627,6 +627,82 @@ header.header {
 	line-height: 22px;
 }
 
+
+/*------------------------------------*\
+    Callback form
+\*------------------------------------*/
+.callback-form {
+	.modal-header {
+		position: relative;
+		text-align: center;
+		background: $blue-light;
+		border: none;
+
+		.modal-title {
+			font-size: 24px;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+
+		.close {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			background: none;
+			outline: none;
+			border: none;
+
+			i {
+				color: $gray-bold;
+				font-size: 30px;
+				transition: color .2s;
+			}
+
+			&:hover {
+				i {
+					color: $orange;
+				}
+			}
+		}
+	}
+
+	.modal-body {
+		overflow: hidden;
+
+		form {
+			width: 385px;
+			margin: 0 auto;
+
+			span[role=alert] {
+				color: $red;
+				font-size: .9em;
+			}
+
+			div[role=alert] {
+				border-color: $red;
+				padding: 10px;
+			}
+		}
+	}
+}
+
+.callback-form__desc {
+	font-size: 15px;
+}
+
+.callback-form__field {
+	margin-bottom: 10px;
+	font-size: 18px;
+}
+.callback-form__important {
+	color: $red;
+}
+
+.callback-form__submit {
+	float: right;
+	background: none;
+}
+
 /**
 ***************************************************************
 * =FOOTER
@@ -826,6 +902,21 @@ footer.footer {
 			}
 		}
 	}
+
+	/* Callback form */
+	.callback-form {
+		.modal-body {
+			form {
+				width: 480px;
+
+				input[type=text],
+				input[type=email],
+				input[type=tel] {
+					width: 100%;
+				}
+			}
+		}
+	}
 }
 
 @media screen and (max-width:640px) {
@@ -851,6 +942,17 @@ footer.footer {
 	.sec-list__name {
 		display: block;
 		text-align: center;
+	}
+}
+
+@media screen and (max-width:580px) {
+	/* Callback form */
+	.callback-form {
+		.modal-body {
+			form {
+				width: 100%;
+			}
+		}
 	}
 }
 

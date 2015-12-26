@@ -100,11 +100,6 @@ table {
 
 /**
 * ----------------------------------------------------------------------------------------------------
-* FONTS
-* ----------------------------------------------------------------------------------------------------
-*/
-/**
-* ----------------------------------------------------------------------------------------------------
 * VARIABLES
 * ----------------------------------------------------------------------------------------------------
 */
@@ -169,6 +164,14 @@ h3 {
 p {
   line-height: 25px; }
 
+input[type=text],
+input[type=email],
+input[type=tel] {
+  padding-left: 10px;
+  border: 1px solid #C6C6C8;
+  outline: none;
+  height: 40px; }
+
 /**
 * ----------------------------------------------------------------------------------------------------
 * HELPERS
@@ -179,7 +182,8 @@ p {
   padding: 9px 20px;
   color: #e3621c;
   border: 1px solid #e3621c;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  outline: none; }
   .btn:hover,
   .btn:active,
   .btn:focus {
@@ -189,7 +193,8 @@ p {
     -webkit-transition: .4s color;
     transition: .4s color;
     -webkit-transition: .3s background;
-    transition: .3s background; }
+    transition: .3s background;
+    outline: none; }
 
 .btn-order {
   color: #fff;
@@ -815,6 +820,58 @@ header.header {
   font-size: 18px;
   line-height: 22px; }
 
+/*------------------------------------*    Callback form
+\*------------------------------------*/
+.callback-form .modal-header {
+  position: relative;
+  text-align: center;
+  background: #eaf0f2;
+  border: none; }
+  .callback-form .modal-header .modal-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase; }
+  .callback-form .modal-header .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    outline: none;
+    border: none; }
+    .callback-form .modal-header .close i {
+      color: #9A9A9A;
+      font-size: 30px;
+      -webkit-transition: color .2s;
+      transition: color .2s; }
+    .callback-form .modal-header .close:hover i {
+      color: #e3621c; }
+
+.callback-form .modal-body {
+  overflow: hidden; }
+  .callback-form .modal-body form {
+    width: 385px;
+    margin: 0 auto; }
+    .callback-form .modal-body form span[role=alert] {
+      color: #E31D1D;
+      font-size: .9em; }
+    .callback-form .modal-body form div[role=alert] {
+      border-color: #E31D1D;
+      padding: 10px; }
+
+.callback-form__desc {
+  font-size: 15px; }
+
+.callback-form__field {
+  margin-bottom: 10px;
+  font-size: 18px; }
+
+.callback-form__important {
+  color: #E31D1D; }
+
+.callback-form__submit {
+  float: right;
+  background: none; }
+
 /**
 ***************************************************************
 * =FOOTER
@@ -953,7 +1010,14 @@ footer.footer {
   #menu-main .menu-item-has-children:hover .sub-menu {
     display: none; }
   #menu-main .sub-menu:after {
-    display: none; } }
+    display: none; }
+  /* Callback form */
+  .callback-form .modal-body form {
+    width: 480px; }
+    .callback-form .modal-body form input[type=text],
+    .callback-form .modal-body form input[type=email],
+    .callback-form .modal-body form input[type=tel] {
+      width: 100%; } }
 
 @media screen and (max-width: 640px) {
   aside.aside {
@@ -970,6 +1034,11 @@ footer.footer {
   .sec-list__name {
     display: block;
     text-align: center; } }
+
+@media screen and (max-width: 580px) {
+  /* Callback form */
+  .callback-form .modal-body form {
+    width: 100%; } }
 
 @media screen and (max-width: 480px) {
   /*------------------------------------*	    Slider

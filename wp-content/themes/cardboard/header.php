@@ -20,7 +20,7 @@
 	<!--[if lt IE 9]>
 		<script src="<?php bloginfo('template_url'); ?>/js/libs/html5shiv.min.js"></script>
 	<![endif]-->
-	<?php //wp_head(); ?>
+	<?  wp_head() ?>
 </head>
 <body>
 	<!-- begin wrap  -->
@@ -35,7 +35,7 @@
 
 					<div class="header-info col-md-10 col-sm-12 col-xs-12 pull-right">
 						<a href="tel:+73232" class="header-info__phone">+7 (323) <span>323-32-32</span></a>
-						<a href="#" class="callback btn header-info__callback">Заказать звонок</a>
+						<a href="#" class="callback btn header-info__callback" data-toggle="modal" data-target="#callback-form">Заказать звонок</a>
 						     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 						        <span class="sr-only">Toggle navigation</span>
 						        <span class="icon-bar"></span>

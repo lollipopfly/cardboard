@@ -10,7 +10,7 @@
 
 	add_theme_support('post-thumbnails');
 
-
+;
 	// Избавляемся от [...] в цитате поста
 	function new_excerpt_more($more) {
 		return '...';

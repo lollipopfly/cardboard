@@ -47,6 +47,11 @@ gulp.task('compress', function() {
 	return gulp.src([
 					'js/libs/bootstrap.min.js',
 					'node_modules/slick-carousel/slick/slick.js',
+					// Mask
+					'node_modules/jquery.inputmask/dist/inputmask/inputmask.js',
+					'node_modules/jquery.inputmask/dist/inputmask/inputmask.phone.extensions.js',
+					'node_modules/jquery.inputmask/dist/inputmask/jquery.inputmask.js',
+
 					'js/common.js'])
 		.pipe(plumber())
 		.pipe(concat('global.min.js'))
@@ -124,8 +129,7 @@ gulp.task('notify', function() {
     Run default gulp tasks
 \*------------------------------------*/
 
-// gulp.task('default', ['sass', 'compress', 'watch']);
-gulp.task('default', ['sass', 'watch']);
+gulp.task('default', ['sass', 'compress', 'watch']);
 
 
 /**

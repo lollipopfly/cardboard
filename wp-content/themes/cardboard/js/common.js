@@ -19,6 +19,8 @@ $(document).ready(function() {
 		adaptiveHeight: true
 	});
 
+	// Mask for callback phone
+	$('.callback-form__tel').inputmask("+7 (999) 999-99-99");
 
 /**
 ***************************************************************

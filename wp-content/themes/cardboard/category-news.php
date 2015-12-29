@@ -1,10 +1,5 @@
-<?php
-/*
-Template Name: News
-*/
-?>
-
 <? get_header();?>
+news
 	<!-- begin row  -->
 	<div class="row">
 		<aside class="aside col-md-6 col-sm-8 col-xs-8">
@@ -15,7 +10,7 @@ Template Name: News
 		<div class="content col-md-18 col-sm-16 col-xs-16">
 			<?php
 				$id = 11; // ID заданной рубрики
-				$n = 2;   // количество выводимых записей
+				$n = 10;   // количество выводимых записей
 				$args = array(
 					'cat' => $id,
 					'post_type' => 'post',
@@ -48,8 +43,7 @@ Template Name: News
 						<?php endwhile; ?>
 					</ul>
 				<? endif;?>
-			<?php wp_pagenavi( array( 'query' => $recent ));
-			?>
+			<? wp_pagenavi( array( 'query' => $recent ));?>
 		</div>
 		<!-- end content -->
 	</div>

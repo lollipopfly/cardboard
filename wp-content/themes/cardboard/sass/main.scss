@@ -103,11 +103,16 @@ p {
 
 input[type=text],
 input[type=email],
-input[type=tel] {
+input[type=tel],
+textarea {
 	padding-left: 10px;
 	border: 1px solid $gray-super-light;
 	outline: none;
 	height: 40px;
+}
+
+textarea {
+	height: auto;
 }
 
 

@@ -1,9 +1,3 @@
-<?php
-/*
-Template Name: Сatalog
-*/
-?>
-
 <? get_header();?>
 <!-- begin row  -->
 <div class="row">

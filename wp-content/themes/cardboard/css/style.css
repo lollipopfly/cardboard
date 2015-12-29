@@ -166,11 +166,15 @@ p {
 
 input[type=text],
 input[type=email],
-input[type=tel] {
+input[type=tel],
+textarea {
   padding-left: 10px;
   border: 1px solid #C6C6C8;
   outline: none;
   height: 40px; }
+
+textarea {
+  height: auto; }
 
 /**
 * ----------------------------------------------------------------------------------------------------
@@ -677,10 +681,9 @@ header.header {
   .breadcrumbs i {
     color: #e3621c;
     font-size: 10px; }
-
-.breadcrumbs__page {
-  color: #9A9A9A;
-  font-size: 12px; }
+  .breadcrumbs .active {
+    font-size: 13px;
+    color: #e3621c; }
 
 /*------------------------------------*    Pagination
 \*------------------------------------*/
@@ -688,14 +691,16 @@ header.header {
   text-align: center; }
   .wp-pagenavi a:first-child,
   .wp-pagenavi .current:first-child {
-    border-left: 1px solid #eee; }
+    border-left: 1px solid #eee !important; }
   .wp-pagenavi a,
   .wp-pagenavi .current {
     display: inline-block;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-    border-right: 1px solid #eee;
-    padding: 10px; }
+    margin: 0 !important;
+    border-top: 1px solid #eee !important;
+    border-bottom: 1px solid #eee !important;
+    border-right: 1px solid #eee !important;
+    border-left: none !important;
+    padding: 10px !important; }
     .wp-pagenavi a:hover,
     .wp-pagenavi a:active,
     .wp-pagenavi a:focus,
@@ -820,6 +825,16 @@ header.header {
   font-size: 18px;
   line-height: 22px; }
 
+/*------------------------------------*    Contact page
+\*------------------------------------*/
+.callback-form--contact {
+  width: 400px; }
+  .callback-form--contact input[type=text],
+  .callback-form--contact input[type=email],
+  .callback-form--contact input[type=tel],
+  .callback-form--contact textarea {
+    width: 100%; }
+
 /*------------------------------------*    Callback form
 \*------------------------------------*/
 .callback-form .modal-header {
@@ -849,8 +864,12 @@ header.header {
 .callback-form .modal-body {
   overflow: hidden; }
   .callback-form .modal-body form {
-    width: 385px;
+    width: 407px;
     margin: 0 auto; }
+    .callback-form .modal-body form input[type=text],
+    .callback-form .modal-body form input[type=email],
+    .callback-form .modal-body form input[type=tel] {
+      width: 100%; }
     .callback-form .modal-body form span[role=alert] {
       color: #E31D1D;
       font-size: .9em; }
@@ -864,6 +883,9 @@ header.header {
 .callback-form__field {
   margin-bottom: 10px;
   font-size: 18px; }
+
+.callback-form__important-desc {
+  font-size: 14px; }
 
 .callback-form__important {
   color: #E31D1D; }
@@ -1011,13 +1033,10 @@ footer.footer {
     display: none; }
   #menu-main .sub-menu:after {
     display: none; }
-  /* Callback form */
-  .callback-form .modal-body form {
+  /* Contact fomr */
+  .callback-form--contact {
     width: 480px; }
-    .callback-form .modal-body form input[type=text],
-    .callback-form .modal-body form input[type=email],
-    .callback-form .modal-body form input[type=tel] {
-      width: 100%; } }
+  /* Callback form */ }
 
 @media screen and (max-width: 640px) {
   aside.aside {
@@ -1036,8 +1055,8 @@ footer.footer {
     text-align: center; } }
 
 @media screen and (max-width: 580px) {
-  /* Callback form */
-  .callback-form .modal-body form {
+  /* Contact form */
+  .callback-form--contact {
     width: 100%; } }
 
 @media screen and (max-width: 480px) {

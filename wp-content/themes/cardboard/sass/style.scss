@@ -436,12 +436,17 @@ header.header {
 		color: $orange;
 		font-size: 10px;
 	}
+
+	.active {
+		font-size: 13px;
+		color: $orange;
+	}
 }
 
-.breadcrumbs__page {
-	color: $gray-bold;
-	font-size: 12px;
-}
+// .breadcrumbs__page {
+// 	color: $gray-bold;
+// 	font-size: 12px;
+// }
 
 // .bradcrumbs__link {
 // 	&:--hoverous {
@@ -459,16 +464,18 @@ header.header {
 
 	a:first-child,
 	.current:first-child {
-		border-left: 1px solid $gray;
+		border-left: 1px solid $gray !important;
 	}
 
 	a,
 	.current {
 		display: inline-block;
-		border-top: 1px solid $gray;
-		border-bottom: 1px solid $gray;
-		border-right: 1px solid $gray;
-		padding: 10px;
+		margin: 0 !important;
+		border-top: 1px solid $gray !important;
+		border-bottom: 1px solid $gray !important;
+		border-right: 1px solid $gray !important;
+		border-left: none !important;
+		padding: 10px !important;
 
 		&:--hoverous {
 			text-decoration: none;
@@ -629,6 +636,21 @@ header.header {
 
 
 /*------------------------------------*\
+    Contact page
+\*------------------------------------*/
+.callback-form--contact {
+	width: 400px;
+
+	input[type=text],
+	input[type=email],
+	input[type=tel],
+	textarea {
+		width: 100%;
+	}
+}
+
+
+/*------------------------------------*\
     Callback form
 \*------------------------------------*/
 .callback-form {
@@ -670,8 +692,14 @@ header.header {
 		overflow: hidden;
 
 		form {
-			width: 385px;
+			width: 407px;
 			margin: 0 auto;
+
+			input[type=text],
+			input[type=email],
+			input[type=tel] {
+				width: 100%;
+			}
 
 			span[role=alert] {
 				color: $red;
@@ -694,6 +722,11 @@ header.header {
 	margin-bottom: 10px;
 	font-size: 18px;
 }
+
+.callback-form__important-desc {
+	font-size: 14px;
+}
+
 .callback-form__important {
 	color: $red;
 }
@@ -903,20 +936,19 @@ footer.footer {
 		}
 	}
 
-	/* Callback form */
-	.callback-form {
-		.modal-body {
-			form {
-				width: 480px;
-
-				input[type=text],
-				input[type=email],
-				input[type=tel] {
-					width: 100%;
-				}
-			}
-		}
+	/* Contact fomr */
+	.callback-form--contact {
+		width: 480px;
 	}
+
+	/* Callback form */
+	// .callback-form {
+	// 	.modal-body {
+	// 		form {
+	// 			width: 480px;
+	// 		}
+	// 	}
+	// }
 }
 
 @media screen and (max-width:640px) {
@@ -946,14 +978,18 @@ footer.footer {
 }
 
 @media screen and (max-width:580px) {
-	/* Callback form */
-	.callback-form {
-		.modal-body {
-			form {
-				width: 100%;
-			}
-		}
+	/* Contact form */
+	.callback-form--contact {
+		width: 100%;
 	}
+// 	/* Callback form */
+// 	.callback-form {
+// 		.modal-body {
+// 			form {
+// 				width: 100%;
+// 			}
+// 		}
+// 	}
 }
 
 @media screen and (max-width:480px) {

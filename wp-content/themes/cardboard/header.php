@@ -62,7 +62,9 @@
 		<!-- /.container -->
 		<!-- begin container main  -->
 		<div class="container main">
-			<?the_breadcrumb();?>
 			<?if(!is_home()):?>
+				<div class="breadcrumbs" typeof="BreadcrumbList" vocab="http://schema.org/">
+				    <? if(function_exists('bcn_display')) bcn_display();?>
+				</div>
 				<h2><?=wp_title();?></h2>
 			<?endif;?>

@@ -1,12 +1,8 @@
 <? get_header();?>
 <!-- begin row  -->
 <div class="row">
-	<aside class="aside col-md-6 col-sm-8 col-xs-8">
-		<? require(get_template_directory() . '/include/cat-list.php');?>
-	</aside>
-
 	<!-- begin content  -->
-	<div class="content col-md-18 col-sm-16 col-xs-16">
+	<div class="content col-md-24 col-sm-24 col-xs-24">
 	<?
 		$main_category = get_category_by_slug('catalog');
 		$main_category_desc = $main_category->description;

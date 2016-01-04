@@ -161,6 +161,9 @@ h3 {
   font-weight: bold;
   font-size: 25px; }
 
+h4 {
+  font-weight: bold; }
+
 p {
   line-height: 25px; }
 
@@ -556,10 +559,7 @@ header.header {
   display: inline-block;
   float: left;
   margin-right: 10px;
-  width: 30%; }
-
-.sec-list__image {
-  max-width: 100px; }
+  width: 20%; }
 
 .sec-list__name {
   font-size: 18px;
@@ -834,6 +834,13 @@ header.header {
   .callback-form--contact input[type=tel],
   .callback-form--contact textarea {
     width: 100%; }
+  .callback-form--contact span[role=alert] {
+    color: #E31D1D;
+    font-size: .9em; }
+  .callback-form--contact + div[role=alert] {
+    width: 400px;
+    border-color: #E31D1D;
+    padding: 10px; }
 
 /*------------------------------------*    Callback form
 \*------------------------------------*/
@@ -1035,8 +1042,9 @@ footer.footer {
     display: none; }
   /* Contact fomr */
   .callback-form--contact {
-    width: 480px; }
-  /* Callback form */ }
+    width: 100%; }
+    .callback-form--contact + div[role=alert] {
+      width: 100%; } }
 
 @media screen and (max-width: 640px) {
   aside.aside {

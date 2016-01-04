@@ -282,12 +282,9 @@ header.header {
 	display: inline-block;
 	float: left;
 	margin-right: 10px;
-	width: 30%;
+	width: 20%;
 }
 
-.sec-list__image {
-	max-width: 100px;
-}
 .sec-list__name {
 	font-size: 18px;
 	font-weight: bold;
@@ -647,6 +644,17 @@ header.header {
 	textarea {
 		width: 100%;
 	}
+
+	span[role=alert] {
+		color: $red;
+		font-size: .9em;
+	}
+
+	& + div[role=alert] {
+		width: 400px;
+		border-color: $red;
+		padding: 10px;
+	}
 }
 
 
@@ -938,17 +946,12 @@ footer.footer {
 
 	/* Contact fomr */
 	.callback-form--contact {
-		width: 480px;
-	}
+		width: 100%;
 
-	/* Callback form */
-	// .callback-form {
-	// 	.modal-body {
-	// 		form {
-	// 			width: 480px;
-	// 		}
-	// 	}
-	// }
+		& + div[role=alert] {
+			width: 100%;
+		}
+	}
 }
 
 @media screen and (max-width:640px) {

@@ -58,9 +58,9 @@
 			<div class="row">
 				<!-- begin col-md-24 handmade  -->
 				<section class="col-md-24 handmade">
-					<h3>Соберите Google Cardboard своими руками</h3>
-					<img class="handmade__img" src="http://lorempixel.com/300/150/" alt="">
-					<p class="handmade__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt libero, itaque accusantium! Eveniet, hic itaque? Atque nesciunt suscipit reprehenderit expedita molestiae, iusto! Quos qui quisquam possimus, perspiciatis culpa rem velit.</p>
+					<h3>Инструкция по сборке Google Cardbord</h3>
+					<img class="handmade__img" src="/wp-content/uploads/2016/01/sma2.jpg" alt="">
+					<p class="handmade__text">На нашем сайте Вы можете ознакомиться с инструкцией, по сборке очков виртуальной реальности Google Cardboard. Инструкция находится в разделе <a href="/faq/">Вопрос - ответ</a>. Так-же в данном разделе Вы можете ознакомиться с наиболее популярными вопросами, которые возникают у пользователей данного девайса.</p>
 				</section>
 				<!-- end col-md-24 handmade -->
 			</div>

@@ -1,5 +1,4 @@
 <? get_header();?>
-news
 	<!-- begin row  -->
 	<div class="row">
 		<aside class="aside col-md-6 col-sm-8 col-xs-8">

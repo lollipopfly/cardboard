@@ -30,7 +30,7 @@
 								$category_link = get_category_link($value->term_id);
 							?>
 							<?if($image_src):?>
-								<a class="sec-list__image-link" href="<?get_category_link( $value->term_id )?>">
+								<a class="sec-list__image-link" href="<?=get_category_link( $value->term_id )?>">
 									<img class="sec-list__image" src="<?=$image_src?>" alt="">
 								</a>
 							<?endif;?>

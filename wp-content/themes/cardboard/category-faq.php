@@ -27,9 +27,7 @@
 							<dt class="faq__name"><?php the_title(); ?>
 								<i class="fa fa-angle-down"></i>
 							</dt>
-							<?php if (isset($content)): ?>
 								<dd class="faq__content"><? the_content();?></dd>
-							<?php endif ?>
 					<?php endwhile; ?>
 				</dl>
 			<? endif;?>

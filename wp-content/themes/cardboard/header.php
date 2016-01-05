@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<link href="<?php bloginfo('template_url'); ?>/images/favicon-32.png" rel="shortcut icon" type="image/x-icon">
 	<!-- BOOTSTRAP -->
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css">
 
@@ -31,10 +31,11 @@
 				<div class="row header-top">
 					<div class="col-md-12 col-sm-12 col-xs-12">
 						<a href="/" class="logo"></a>
+						<a href="/" class="logo-mini"></a>
 					</div>
 
 					<div class="header-info col-md-10 col-sm-12 col-xs-12 pull-right">
-						<a href="tel:+73232" class="header-info__phone">+7 (323) <span>323-32-32</span></a>
+						<a href="tel:+79374008319" class="header-info__phone">+7 (937) <span>400-83-19</span></a>
 						<a href="#" class="callback btn header-info__callback" data-toggle="modal" data-target="#callback-form">Заказать звонок</a>
 						     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 						        <span class="sr-only">Toggle navigation</span>

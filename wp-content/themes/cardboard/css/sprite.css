@@ -9,9 +9,15 @@ Icon classes can be used entirely standalone. They are named after their origina
 <img class="icon-home" />
 ```
 */
+.logo-mini {
+  background-image: url(../images/sprite.png);
+  background-position: 0px -94px;
+  width: 201px;
+  height: 72px;
+}
 .logo {
   background-image: url(../images/sprite.png);
   background-position: 0px 0px;
-  width: 350px;
-  height: 106px;
+  width: 313px;
+  height: 93px;
 }

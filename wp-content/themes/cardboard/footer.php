@@ -9,20 +9,14 @@
 			<!-- begin row footer-top  -->
 			<div class="row footer-top">
 				<!-- begin col-md-6  -->
-				<div class="col-md-6">
-					<a href="/" class="footer-logo">Футер лого</a>
-				</div>
-				<!-- end col-md-6 -->
-
-				<!-- begin col-md-6  -->
-				<div class="col-md-8 footer-menu">
+				<div class="col-md-19 col-xs-17 footer-menu">
 					<?php wp_nav_menu('menu=footer-menu'); ?>
 				</div>
 				<!-- end col-md-6 -->
 
 				<!-- begin col-md-5  -->
-				<div class="col-md-5 pull-right">
-					<a href="tel:+3(323)212" class="footer__phone">+3 (323) <span>32-32</span></a>
+				<div class="footer-contact col-md-5 col-sm-7 col-xs-9 pull-right">
+					<a href="tel:+7(937)400-83-19" class="footer__phone">+7 (937) <span>400-83-19</span></a>
 					<a href="mailto:fesf@gmaikl.ru" class="footer__email">fesf@gmaikl.ru</a>
 				</div>
 				<!-- end col-md-5 -->
@@ -46,6 +40,9 @@
 
 	<!-- Calback form -->
 	<? require(get_template_directory() . '/include/callback.php');?>
+	<!-- Order form -->
+	<? require(get_template_directory() . '/include/order.php');?>
+
 	<?php wp_footer(); ?>
 </body>
 </html>

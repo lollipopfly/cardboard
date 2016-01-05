@@ -6,6 +6,7 @@
 
 $white: #fff;
 $black: #000;
+$black-medium: #323232;
 $gray: #eee;
 $gray-bold: #9A9A9A;
 $gray-light: #969ba5;
@@ -183,6 +184,10 @@ textarea {
 .navbar-collapse {
 	padding-left: 0;
 	padding-right: 0;
+}
+
+.navbar-toggle {
+	margin-top: 16px;
 }
 
 

@@ -19,8 +19,69 @@ $(document).ready(function() {
 		adaptiveHeight: true
 	});
 
+	// Карточка товара Slideshow
+	$('.slider-for').slick({
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+	  arrows: false,
+	  fade: true,
+	  asNavFor: '.slider-nav'
+	});
+
+	$('.slider-nav').slick({
+	  slidesToShow: 3,
+	  slidesToScroll: 1,
+	  asNavFor: '.slider-for',
+	  centerMode: true,
+	  focusOnSelect: true,
+	  responsive: [
+	      {
+	        breakpoint: 1200,
+	        settings: {
+	          slidesToShow: 2,
+	          slidesToScroll: 1,
+	        }
+	      },
+	      {
+	      	breakpoint: 991,
+	      	settings: {
+	      	  slidesToShow: 1,
+	      	  slidesToScroll: 1,
+	      	}
+	      },
+	      {
+	      	breakpoint: 761,
+	      	settings: {
+	      	  slidesToShow: 2,
+	      	  slidesToScroll: 1,
+	      	}
+	      },
+	  ]
+	});
+
+	// Magnific Popup
+	$('.slider-for__link').magnificPopup({
+		type:'image',
+		zoom: {
+		    enabled: true, // By default it's false, so don't forget to enable it
+		    duration: 300, // duration of the effect, in milliseconds
+		    easing: 'ease-in-out', // CSS transition easing function
+		    opener: function(openerElement) {
+		    return openerElement.is('img') ? openerElement : openerElement.find('img');
+		    }
+		  }
+	});
+
 	// Mask for callback phone
 	$('.callback-form__tel').inputmask("+7 (999) 999-99-99");
+
+	$('.order-trigger').on('click', function() {
+		event.preventDefault();
+		var orderName = $(this).parent().children('.product-email-name').text();
+		$('#hidden-order-field').val(orderName);
+		$('.callback-form__order-name').text(orderName);
+		$('#order-form').modal('show');
+	});
 
 /**
 ***************************************************************
@@ -52,7 +113,6 @@ $('.faq__name').on('click', function(event) {
 		$this.addClass('faq__name--active')
 			.siblings('.faq__name')
 			.removeClass('faq__name--active');
-
 		console.log('no');
 	}
 

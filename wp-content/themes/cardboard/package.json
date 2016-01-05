@@ -19,6 +19,7 @@
     "gulp-plumber": "*",
     "gulp-uglify": "^1.5.1",
     "jquery.inputmask": "^3.2.5",
+    "magnific-popup": "^1.0.1",
     "postcss-custom-selectors": "*",
     "postcss-font-magician": "*",
     "postcss-size": "^1.0.0",

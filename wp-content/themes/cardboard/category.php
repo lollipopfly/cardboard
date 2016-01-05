@@ -21,25 +21,25 @@
 			<ul class="recent recent--cat row">
 				<? while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 					<li class="recent__item">
-						<? $cost = get_post_meta(get_the_ID(), 'cost');
-						   $old_cost = get_post_meta(get_the_ID(), 'old-cost');
-						   $info = get_post_meta(get_the_ID(), 'preview');
+						<? $cost = get_field('cost');
+						   $old_cost = get_field('old_cost');
+						   $info = get_field('preview');
 						?>
 						<?	if ( has_post_thumbnail() ) {
 						    $image_src = wp_get_attachment_image_src( get_post_thumbnail_id(),'thumbnail' );?>
-						     <a href="<? the_permalink()?>"><img width="100%" src="<?=$image_src[0]?>"></a>
+						     <a class="recent__link" href="<? the_permalink()?>"><img width="100%" src="<?=$image_src[0]?>"></a>
 						<?}?>
-						<a class="recent__name" href="<?php the_permalink(); ?>"><? the_title(); ?></a>
-						<? if(isset($info[0])):?>
-							<span class="recent__info"><?=$info[0];?></span>
+						<a class="recent__name product-email-name" href="<?php the_permalink(); ?>"><? the_title(); ?></a>
+						<? if($info):?>
+							<span class="recent__info"><?=$info;?></span>
 						<?endif;?>
-						<? if(isset($cost[0])):?>
-							<p class="recent__price"><?=$cost[0];?> руб.</p>
+						<? if($cost):?>
+							<p class="recent__price"><?=$cost;?> руб.</p>
 						<?endif;?>
-						<? if(isset($old_cost[0])):?>
-							<p class="recent__discount"><?=$old_cost[0];?> руб.</p>
+						<? if($old_cost):?>
+							<p class="recent__discount"><?=$old_cost;?> руб.</p>
 						<?endif;?>
-						<a href="#" class="recent__order btn btn-order">Заказать</a>
+						<a href="#" class="recent__order btn btn-order order-trigger">Заказать</a>
 					</li>
 				<? endwhile;?>
 			</ul>

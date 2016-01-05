@@ -28,6 +28,7 @@ gulp.task('sass', function() {
 					'sass/main.scss',
 					'css/sprite.css',
 					'node_modules/slick-carousel/slick/slick.css',
+					'node_modules/magnific-popup/dist/magnific-popup.css',
 					'sass/style.scss',])
 		.pipe(plumber())
 		//.pipe(sass().on('error', error))
@@ -47,6 +48,7 @@ gulp.task('compress', function() {
 	return gulp.src([
 					'js/libs/bootstrap.min.js',
 					'node_modules/slick-carousel/slick/slick.js',
+					'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
 					// Mask
 					'node_modules/jquery.inputmask/dist/inputmask/inputmask.js',
 					'node_modules/jquery.inputmask/dist/inputmask/inputmask.phone.extensions.js',

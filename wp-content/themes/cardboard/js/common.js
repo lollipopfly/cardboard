@@ -59,9 +59,12 @@ $(document).ready(function() {
 	  ]
 	});
 
-	// Magnific Popup
+	// Magnific Popup for slideshow
 	$('.slider-for__link').magnificPopup({
 		type:'image',
+		gallery:{
+		    enabled:true
+		},
 		zoom: {
 		    enabled: true, // By default it's false, so don't forget to enable it
 		    duration: 300, // duration of the effect, in milliseconds
@@ -74,14 +77,6 @@ $(document).ready(function() {
 
 	// Mask for callback phone
 	$('.callback-form__tel').inputmask("+7 (999) 999-99-99");
-
-	$('.order-trigger').on('click', function() {
-		event.preventDefault();
-		var orderName = $(this).parent().children('.product-email-name').text();
-		$('#hidden-order-field').val(orderName);
-		$('.callback-form__order-name').text(orderName);
-		$('#order-form').modal('show');
-	});
 
 /**
 ***************************************************************
@@ -99,6 +94,18 @@ $('#menu-main li.menu-item-has-children > a').on('click', function(event) {
 		$(this).siblings('ul').slideToggle(400);
 
 	}
+});
+
+/*------------------------------------*\
+    Order trigger
+\*------------------------------------*/
+
+$('.order-trigger').on('click', function() {
+	event.preventDefault();
+	var orderName = $(this).parent().children('.product-email-name').text();
+	$('#hidden-order-field').val(orderName);
+	$('.callback-form__order-name').text(orderName);
+	$('#order-form').modal('show');
 });
 
 /*------------------------------------*\

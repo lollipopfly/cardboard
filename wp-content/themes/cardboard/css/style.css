@@ -250,13 +250,25 @@ Icon classes can be used entirely standalone. They are named after their origina
 */
 .logo-mini {
   background-image: url(../images/sprite.png);
-  background-position: 0px -94px;
+  background-position: 0px -258px;
+  width: 201px;
+  height: 55px; }
+
+.logo-mini_1 {
+  background-image: url(../images/sprite.png);
+  background-position: 0px -185px;
   width: 201px;
   height: 72px; }
 
 .logo {
   background-image: url(../images/sprite.png);
   background-position: 0px 0px;
+  width: 327px;
+  height: 90px; }
+
+.logo_1 {
+  background-image: url(../images/sprite.png);
+  background-position: 0px -91px;
   width: 313px;
   height: 93px; }
 
@@ -866,6 +878,8 @@ header.header {
         background: #A13901; }
     #menu-main .sub-menu li:last-child a {
       border: none; }
+  #menu-main .sub-menu li.current-menu-item a {
+    background: #A13901; }
   #menu-main .sub-menu:after {
     content: '';
     position: absolute;
@@ -970,8 +984,12 @@ header.header {
   .aside-cats .current-cat a:focus {
     color: #fff;
     background: #e3621c; }
+    .aside-cats .current-cat a:hover:after,
+    .aside-cats .current-cat a:active:after,
+    .aside-cats .current-cat a:focus:after {
+      right: 20px; }
   .aside-cats .current-cat a:after {
-    content: ''; }
+    color: #fff; }
 
 /*------------------------------------*    Product Page
 \*------------------------------------*/
@@ -1035,11 +1053,9 @@ header.header {
 .slider-nav__item {
   background-size: contain !important;
   height: 67px !important;
-  outline: none;
-  overflow: hidden; }
+  outline: none; }
 
 .slider-nav__img {
-  margin: 0 10px;
   cursor: pointer; }
 
 .product__hidden-name {
@@ -1056,6 +1072,7 @@ header.header {
   color: #9A9A9A; }
 
 .product__cost {
+  margin-bottom: 8px;
   font-weight: bold;
   font-size: 20px; }
 
@@ -1092,6 +1109,7 @@ header.header {
   font-weight: bold;
   border-bottom: 1px dotted #000; }
   .props-list__item td {
+    width: 50%;
     position: relative;
     padding: 10px 0; }
   .props-list__item td:nth-child(1) span {
@@ -1136,6 +1154,8 @@ header.header {
 
 .recent__link {
   display: block;
+  overflow: hidden;
+  max-height: 154px;
   margin-bottom: 10px; }
 
 .wp-post-image,
@@ -1158,7 +1178,7 @@ header.header {
   font-size: 15px; }
 
 .recent__price {
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   font-weight: bold;
   text-align: right;
   font-size: 20px; }
@@ -1734,7 +1754,7 @@ footer.footer {
   .logo-mini {
     display: block; }
   .navbar-toggle {
-    margin-top: 12px; }
+    margin-top: -4px; }
   /* PRODUCT */
   .slider-nav {
     width: 100%; }

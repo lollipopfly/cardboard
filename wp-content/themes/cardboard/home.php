@@ -55,12 +55,27 @@
 				<!-- begin col-md-24 handmade  -->
 				<section class="col-md-24 handmade">
 					<h3>Инструкция по сборке Google Cardbord</h3>
-					<img class="handmade__img" src="/wp-content/uploads/2016/01/sma2.jpg" alt="">
-					<p class="handmade__text">На нашем сайте Вы можете ознакомиться с инструкцией, по сборке очков виртуальной реальности Google Cardboard. Инструкция находится в разделе <a href="/faq/">Вопрос - ответ</a>. Так-же в данном разделе Вы можете ознакомиться с наиболее популярными вопросами, которые возникают у пользователей данного девайса.</p>
+					<img class="handmade__img" src="/wp-content/uploads/2016/01/sma2.jpg" alt="Инструкция по сборке Google Cardboard">
+					<p class="handmade__text">На нашем сайте Вы можете найти инструкцию, по сборке <strong>Google Cardboard</strong>. Инструкцию Вы можете найти в разделе <a href="/faq/">Вопрос ответ</a>. Так-же в данном разделе рекомендуем ознакомиться с наиболее популярными вопросами, которые возникают у пользователей данного девайса.
+					<br><br>
+					<strong>Виртуальная реальность</strong> давно среди нас, просто мы ее не замечали. А <strong>очки виртуальной реальности</strong> помогут в нее погрузиться.</p>
 				</section>
 				<!-- end col-md-24 handmade -->
 			</div>
 			<!-- end row -->
+
+			<!-- begin row share  -->
+			<div class="row share">
+				<div class="col-md-24">
+					<h3 class="share__title">Поделиться с друзьями</h3>
+					<div class="share-links">
+						<script type="text/javascript" src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js" charset="utf-8"></script>
+						<script type="text/javascript" src="//yastatic.net/share2/share.js" charset="utf-8"></script>
+						<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,twitter" data-counter=""></div>
+					</div>
+				</div>
+			</div>
+			<!-- end row share -->
 
 			<!-- begin row  -->
 			<div class="row">
@@ -107,4 +122,5 @@
 				<!-- end main-page-news col-md-12 -->
 			</div>
 			<!-- end row -->
+
 <? get_footer();?>

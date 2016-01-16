@@ -12,6 +12,12 @@ header.header {
 	display: block;
 }
 
+.main-title {
+	margin-top: 25px;
+	color: $orange;
+	font-weight: bold;
+}
+
 .header-info__phone {
 	float: left;
 	margin-top: 30px;
@@ -555,6 +561,19 @@ header.header {
 .handmade__img {
 	float: left;
 	margin-right: 20px;
+}
+
+/*------------------------------------*\
+    Share
+\*------------------------------------*/
+.share {
+	margin-bottom: 30px;
+	text-align: center;
+
+}
+
+.share__title {
+	text-align: left;
 }
 
 /*------------------------------------*\
@@ -1296,7 +1315,7 @@ footer.footer {
 }
 
 @media screen and (max-width:480px) {
-	h2 {
+	.page-title {
 		font-size: 25px;
 	}
 

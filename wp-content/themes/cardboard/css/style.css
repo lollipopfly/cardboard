@@ -151,7 +151,7 @@ a {
   a:focus {
     color: #000; }
 
-h2 {
+.page-title {
   font-weight: bold;
   font-size: 29px;
   margin-bottom: 25px; }
@@ -786,6 +786,11 @@ header.header {
 .logo {
   display: block; }
 
+.main-title {
+  margin-top: 25px;
+  color: #e3621c;
+  font-weight: bold; }
+
 .header-info__phone {
   float: left;
   margin-top: 30px;
@@ -1209,6 +1214,15 @@ header.header {
 .handmade__img {
   float: left;
   margin-right: 20px; }
+
+/*------------------------------------*    Share
+\*------------------------------------*/
+.share {
+  margin-bottom: 30px;
+  text-align: center; }
+
+.share__title {
+  text-align: left; }
 
 /*------------------------------------*    Main page news
 \*------------------------------------*/
@@ -1713,7 +1727,7 @@ footer.footer {
     font-size: 17px; } }
 
 @media screen and (max-width: 480px) {
-  h2 {
+  .page-title {
     font-size: 25px; }
   h3 {
     font-size: 20px; }

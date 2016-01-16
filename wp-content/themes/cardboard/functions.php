@@ -22,4 +22,3 @@
 		return 40;
 	}
 	add_filter('excerpt_length', 'new_excerpt_length');
-

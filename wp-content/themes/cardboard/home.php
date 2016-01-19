@@ -1,11 +1,11 @@
 <? get_header();?>
 	<!-- begin slider-container  -->
-		<section class="slider-container">
+<!-- 		<section class="slider-container">
 			<ul class="slider">
 				<li><img src="http://lorempixel.com/1680/500/" alt=""></li>
 				<li><img src="http://lorempixel.com/1680/500/" alt=""></li>
 			</ul>
-		</section>
+		</section> -->
 		<!-- end slider-container -->
 
 		<div class="row">

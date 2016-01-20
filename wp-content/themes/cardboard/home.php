@@ -18,7 +18,9 @@
 								'showposts' => 4,
 								'cat' => 3,
 								'meta_key' => 'hit',
-								'meta_value' => 1
+								'meta_value' => 1,
+								'orderby' => 'title',
+								'order' => 'desc',
 							);
 							$wp_query = new WP_Query($args);
 						?>

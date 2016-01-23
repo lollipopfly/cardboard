@@ -19,7 +19,7 @@ var gulp         = require('gulp'),
 gulp.task('sass', function() {
 	var processors = [
 		autoprefixer({ browsers: ['last 20 versions'] }),
-		require('postcss-font-magician')({}),
+		// require('postcss-font-magician')({}),
 		selectors,
 		size,
 	];
@@ -34,7 +34,7 @@ gulp.task('sass', function() {
 		//.pipe(sass().on('error', error))
 		.pipe(concat('style.css'))
 		.pipe(sass(
-			// {outputStyle: 'compressed'}
+			{outputStyle: 'compressed'}
 			))
 		.pipe(postcss(processors))
 		.pipe(gulp.dest('css/'));

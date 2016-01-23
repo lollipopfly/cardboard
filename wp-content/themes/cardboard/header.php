@@ -6,6 +6,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="<?php bloginfo('template_url'); ?>/images/favicon-32.png" rel="shortcut icon" type="image/x-icon">
+	<!-- OPEN SANS FONT -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 	<!-- BOOTSTRAP -->
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css">
 

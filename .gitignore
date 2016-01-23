@@ -6,6 +6,7 @@ node_modules/
 *.gitkeep
 config.codekit
 *.log
+.DS_STORE
 .htaccess
 sitemap.xml
 sitemap.xml.gz

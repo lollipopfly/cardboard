@@ -31,7 +31,7 @@
 							?>
 							<?if($image_src):?>
 								<a class="sec-list__image-link" href="<?=get_category_link( $value->term_id )?>">
-									<img class="sec-list__image" src="<?=$image_src?>" alt="">
+									<img class="sec-list__image" src="<?=$image_src?>" alt="<?=$value->name?> - Купить очки виртуальной реальности в Пензе." title="<?=$value->name?>">
 								</a>
 							<?endif;?>
 							<a class="sec-list__name" href="<?=esc_url($category_link);?>"><?=$value->name?></a>

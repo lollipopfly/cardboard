@@ -15,6 +15,7 @@
 						<?
 							// Фильтруем по advanced custom fields "hit"
 							$args = array(
+								// 'post_type' => 'attachment',
 								'showposts' => 4,
 								'cat' => 3,
 								'meta_key' => 'hit',
@@ -24,6 +25,7 @@
 							);
 							$wp_query = new WP_Query($args);
 						?>
+
 						<? while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 							<li class="recent__item col-md-6 col-sm-12 col-xs-12">
 								<? $cost = get_field('cost');
@@ -31,10 +33,13 @@
 								   $hit = get_field('hit');
 								   $category = get_the_category();
 								?>
-								<?	if ( has_post_thumbnail() ) {
-								    $image_src = wp_get_attachment_image_src( get_post_thumbnail_id(),'thumbnail' );?>
-								     <a class="recent__link" href="<? the_permalink()?>"><img width="100%" src="<?=$image_src[0]?>"></a>
-								<?}?>
+
+								<?	if ( has_post_thumbnail() ) :?>
+									<?// $image = wp_get_attachment_image(get_post_thumbnail_id(), 'full'); ?>
+								     <a class="recent__link" href="<? the_permalink()?>">
+								     	<? the_post_thumbnail(); ?>
+								     </a>
+								<? endif;?>
 								<a class="recent__name product-email-name" href="<?php the_permalink(); ?>"><? the_title(); ?></a>
 								<? if($category[0]->name):?>
 									<span class="recent__info"><?=$category[0]->name;?></span>

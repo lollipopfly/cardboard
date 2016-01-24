@@ -26,8 +26,11 @@
 						   $info = get_field('preview');
 						?>
 						<?	if ( has_post_thumbnail() ) {
-						    $image_src = wp_get_attachment_image_src( get_post_thumbnail_id(),'thumbnail' );?>
-						     <a class="recent__link" href="<? the_permalink();?>"><img width="100%" src="<?=$image_src[0]?>"></a>
+						    // $image_src = wp_get_attachment_image_src( get_post_thumbnail_id(),'thumbnail' );?>
+						     <a class="recent__link" href="<? the_permalink();?>">
+						     	<!-- <img width="100%" src="<?=$image_src[0]?>"> -->
+						     	<?php the_post_thumbnail(); ?>
+						     </a>
 						<?}?>
 						<a class="recent__name product-email-name" href="<?php the_permalink(); ?>"><? the_title(); ?></a>
 						<? if($info):?>

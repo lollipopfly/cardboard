@@ -1,8 +1,14 @@
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	<?
 		$post_id= get_the_id();
-		// $gallery = miu_get_images($post_id);
-		$gallery = get_multiple_image($post_id);
+
+		// Dynamic featured image plugin for multiple images
+		if( class_exists('Dynamic_Featured_Image') ) {
+			global $dynamic_featured_image;
+			$gallery = $dynamic_featured_image->get_featured_images( $post_id );
+		}
+		$alt = get_the_title(). ' - Очки виртуальной реальности заказать в Пензе!';
+		$image_title = get_the_title();
 		$detail_image = get_field('detail_image');
 		$mini_desc = get_field('desc');
 		$cost = get_field('cost');
@@ -20,26 +26,34 @@
 			<!-- begin product-left  -->
 			<div class="product-left col-md-12 col-sm-12 col-xs-24">
 				<ul class="slider-for">
-				<?php if ($detail_image): ?>
-					<li class="slider-for__item"><a class="slider-for__link" href="<?=$detail_image?>"><img src="<?=$detail_image?>"></a></li>
-				<?php endif ?>
+					<?php if ($detail_image): ?>
+						<li class="slider-for__item">
+							<a class="slider-for__link" href="<?=$detail_image?>">
+								<img src="<?=$detail_image?>" alt="<?=$alt?>" title="<?=$image_title?>">
+							</a>
+						</li>
+					<?php endif ?>
 					<?php foreach ($gallery as $src): ?>
-						<li class="slider-for__item"><a class="slider-for__link" href="<?=$src?>"><img src="<?=$src?>"></a></li>
+						<li class="slider-for__item">
+							<a class="slider-for__link" href="<?=$src['full']?>">
+								<img src="<?=$src['full']?>" alt="<?=$alt?>" title="<?=$image_title?>">
+							</a>
+						</li>
 					<?php endforeach ?>
 				</ul>
 
-						<ul class="slider-nav">
+				<ul class="slider-nav">
+					<li class="slider-nav__item">
+						<img class="slider-nav__img" src="<?=$detail_image?>" alt="<?=$alt?>">
+					</li>
+					<? if($gallery):?>
+						<?php foreach ($gallery as $src): ?>
 							<li class="slider-nav__item">
-								<img class="slider-nav__img" src="<?=$detail_image?>">
+								<img class="slider-nav__img" src="<?=$src['full']?>" alt="<?=$alt?>" title="<?=$image_title?>">
 							</li>
-				<? if($gallery):?>
-							<?php foreach ($gallery as $src): ?>
-								<li class="slider-nav__item">
-									<img class="slider-nav__img" src="<?=$src?>">
-								</li>
-							<?php endforeach ?>
-				<? endif;?>
-						</ul>
+						<?php endforeach ?>
+					<? endif;?>
+				</ul>
 			</div>
 			<!-- end product-left -->
 

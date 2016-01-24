@@ -27,7 +27,7 @@ class Image_Uploader_SR
      * Initialize Image_Uploader_SR
      */
     public function __construct()
-    {   
+    {
         $this->post_types = get_post_types();     //meta box for post and page
         add_action('add_meta_boxes', array($this, 'add_image_box'));
         add_action('save_post', array($this, 'save_images'));
@@ -85,7 +85,7 @@ class Image_Uploader_SR
         foreach ($image_to_save as $image_url)
         {
             if(!empty ($image_url))
-                $sr_multi_images[] = esc_url_raw($image_url); //return cleaned url 
+                $sr_multi_images[] = esc_url_raw($image_url); //return cleaned url
         }
 
         // Update the sr_multi_images meta field.

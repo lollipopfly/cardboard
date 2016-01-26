@@ -68,7 +68,7 @@
 					</div>
 					<div class="row">
 						<div class="col-md-15">
-							<img class="handmade__img" src="<?php bloginfo('template_url');?>/images/instruction.jpg" alt="Инструкция по сборке Google Cardboard">
+							<img title="Инструкция по сборке Google Cardboard" alt="Инструкция по сборке Google Cardboard" class="handmade__img" src="<?php bloginfo('template_url');?>/images/instruction.jpg" alt="Инструкция по сборке Google Cardboard">
 						</div>
 						<div class="col-md-9">
 							<p class="handmade__text">На нашем сайте Вы можете найти инструкцию, по сборке <strong>Google Cardboard</strong>. Инструкцию Вы можете найти в разделе <a href="/faq/">Вопрос ответ</a>. Так-же в данном разделе рекомендуем ознакомиться с наиболее популярными вопросами, которые возникают у пользователей данного девайса.

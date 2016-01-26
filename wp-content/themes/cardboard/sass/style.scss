@@ -390,9 +390,9 @@ header.header {
 }
 
 .product__cost {
-	margin-bottom: 8px;
+	margin-bottom: 13px;
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 23px;
 }
 
 .product__old-cost {
@@ -1003,7 +1003,8 @@ footer.footer {
 
 		a {
 			font-size: 18px;
-			color: $gray-light;
+			// color: $gray-light;
+			color: #D7D7D7;
 
 			&:--hoverous {
 				color: $white;
@@ -1057,7 +1058,8 @@ footer.footer {
 
 .copyright {
 	text-align: center;
-	color: $gray-light;
+	color: #D7D7D7;
+	// color: $gray-light;
 }
 
 /**

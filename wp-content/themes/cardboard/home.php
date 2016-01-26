@@ -61,11 +61,21 @@
 			<div class="row">
 				<!-- begin col-md-24 handmade  -->
 				<section class="col-md-24 handmade">
-					<h3>Инструкция по сборке Google Cardbord</h3>
-					<img class="handmade__img" src="/wp-content/uploads/2016/01/sma2.jpg" alt="Инструкция по сборке Google Cardboard">
-					<p class="handmade__text">На нашем сайте Вы можете найти инструкцию, по сборке <strong>Google Cardboard</strong>. Инструкцию Вы можете найти в разделе <a href="/faq/">Вопрос ответ</a>. Так-же в данном разделе рекомендуем ознакомиться с наиболее популярными вопросами, которые возникают у пользователей данного девайса.
-					<br><br>
-					<strong>Виртуальная реальность</strong> давно среди нас, просто мы ее не замечали. А <strong>очки виртуальной реальности</strong> помогут в нее погрузиться.</p>
+					<div class="row">
+						<div class="col-md-24">
+							<h3>Инструкция по сборке Google Cardbord</h3>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-15">
+							<img class="handmade__img" src="<?php bloginfo('template_url');?>/images/instruction.jpg" alt="Инструкция по сборке Google Cardboard">
+						</div>
+						<div class="col-md-9">
+							<p class="handmade__text">На нашем сайте Вы можете найти инструкцию, по сборке <strong>Google Cardboard</strong>. Инструкцию Вы можете найти в разделе <a href="/faq/">Вопрос ответ</a>. Так-же в данном разделе рекомендуем ознакомиться с наиболее популярными вопросами, которые возникают у пользователей данного девайса.
+							<br><br>
+							<strong>Виртуальная реальность</strong> давно среди нас, просто мы ее не замечали. А <strong>очки виртуальной реальности</strong> помогут в нее погрузиться.</p>
+						</div>
+					</div>
 				</section>
 				<!-- end col-md-24 handmade -->
 			</div>

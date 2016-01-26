@@ -9,15 +9,15 @@
 	<!-- OPEN SANS FONT -->
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 	<!-- BOOTSTRAP -->
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_url');?>/css/bootstrap.min.css">
 
 	<!-- BXSLIDER -->
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_url');?>/css/jquery.bxslider.css">
 
 	<!-- FONT-AWESOME -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/style.css" >
+	<link rel="stylesheet" href="<?php bloginfo('template_url');?>/css/style.css" >
 
 	<!--[if lt IE 9]>
 		<script src="<?php bloginfo('template_url'); ?>/js/libs/html5shiv.min.js"></script>

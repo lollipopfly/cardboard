@@ -6,8 +6,7 @@ Description: Converts Cyrillic, European and Georgian characters in post, term s
 Author: Sol, Sergey Biryukov, Nikolay Karev, Dmitri Gogelia
 Author URI: http://karevn.com/
 Version: 3.5
-*/ 
-
+*/
 function ctl_sanitize_title($title) {
 	global $wpdb;
 
@@ -45,7 +44,7 @@ function ctl_sanitize_title($title) {
 	switch ( $locale ) {
 		case 'bg_BG':
 			$iso9_table['Щ'] = 'SHT';
-			$iso9_table['щ'] = 'sht'; 
+			$iso9_table['щ'] = 'sht';
 			$iso9_table['Ъ'] = 'A';
 			$iso9_table['ъ'] = 'a';
 			break;

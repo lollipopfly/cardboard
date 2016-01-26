@@ -44,5 +44,8 @@
 	<? require(get_template_directory() . '/include/order.php');?>
 
 	<?php wp_footer(); ?>
+
+	<!-- Yandex metrika -->
+	<?php include('include/metrika.php'); ?>
 </body>
 </html>

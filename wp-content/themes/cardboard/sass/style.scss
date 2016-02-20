@@ -1372,6 +1372,16 @@ footer.footer {
 	.news__left {
 		text-align: center;
 	}
+
+	/*------------------------------------*\
+	    YOUTUBE RESPONSIVE EMBED
+	\*------------------------------------*/
+	.video-container iframe,
+	.video-container object,
+	.video-container embed {
+		width: 100%;
+	}
+
 }
 
 @media screen and (max-width:430px) {

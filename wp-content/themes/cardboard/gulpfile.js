@@ -131,7 +131,7 @@ gulp.task('notify', function() {
     Run default gulp tasks
 \*------------------------------------*/
 
-gulp.task('default', ['sass', 'compress', 'watch']);
+gulp.task('default', ['sprite', 'sass', 'compress', 'watch']);
 
 
 /**
